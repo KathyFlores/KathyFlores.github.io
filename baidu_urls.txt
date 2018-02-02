@@ -1,5 +1,5 @@
-http://wangmiao.me/title.html
-http://wangmiao.me/title.html
-http://wangmiao.me/title.html
-http://wangmiao.me/title.html
-http://wangmiao.me/title.html
+http://wangmiao.me/test.html
+http://wangmiao.me/AVL树.html
+http://wangmiao.me/PHP-命名空间.html
+http://wangmiao.me/Introduction-of-IU-First-Edition.html
+http://wangmiao.me/PHP-魔术变量.html
