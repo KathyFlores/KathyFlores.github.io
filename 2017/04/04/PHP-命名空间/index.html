@@ -83,6 +83,11 @@
         <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
         
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/tranquil-heart.min.css?ul3p9I9MsbOxK0L+BHzDDg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+            
+        
 
     
 
@@ -198,7 +203,7 @@
 <!-- Import Font -->
 <!-- Import Roboto -->
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link href="https://fonts.proxy.ustclug.org/css?family=Roboto:300,400,500" rel="stylesheet">
 
 
 <!-- Import Material Icons -->
@@ -422,6 +427,18 @@
     -->
 
     <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACZElEQVR42u3awXHDMAwEQPffdFJB5DtQpBXP6uVxJIarBwEDeP189fXCw8PDw8PDw8N7GO8VX38uF9+Tf17ZGx4eHt4Z3pujNvjHOSlZf2lveHh4eAd5f206P77zdWZhI1kTDw8P75m862/awHD94vDw8PC+j5eUD/JX87jAgIeHh7dcjJgFifzo/3CtBQ8PDy/m5U2m85+P9vfw8PDwAl490rTwCpKxgyQYvNkhHh4e3mZefhDf1bhqG2b1EBgeHh7eQV4+UJUEjNmLSJpqS2VcPDw8vGVemzTn7bGkLJu/xCJNx8PDwzvIW9lcdGQvlB6GKTUeHh7eBt5rdM1CSxskhsMEeHh4eEd4beFg/f586/nwKx4eHt5JXr5ElNSWgaFtub25Bw8PD28zry2qtpu4q1g8TKnx8PDwtvGSYHD9VL71dmQhH/zCw8PDO8MrHisT3zZg5IXd+hcDHh4e3q28vCCbpMgzTNsMw8PDw3sCr23bt2XfvADRJtx4eHh4n+Ktt6baNWfpe/QsHh4e3mZePjKVl3fbMDALKnh4eHhP4M1aU7MSbTtqcFuVGg8PD+9WXnvozxpp16QidcbDw8N7AK9dqDis47+2Y6y3pdR4eHh4MW+lIJsjV0JOvQIeHh7eZl57EN+2idHYQRRm8PDw8I7w8mCQANokO79/GBjw8PDwtvHaRteONLoNUXh4eHj/kdc2ydpnr5PveqYMDw8P70O8/EBfAScFiy2BAQ8PD+/WYkRepEgO9DwdT/aJh4eHd5I3G3JaKV60ASMZt8LDw8M7w/u+Cw8PDw8PDw8P7wHXL9JuKyZQRq2rAAAAAElFTkSuQmCC">
+    
+</ul>
+
     
 
     <!-- Tags (bookmark) -->
@@ -714,30 +731,30 @@ A\B::foo();   // 调用命名空间 &quot;A\A&quot; 中定义的类 &quot;B&quot
                 <!-- Post Comments -->
                 
                     
-    <!-- 使用 DISQUS -->
-<div id="disqus-comment">
-    <div id="disqus_thread"></div>
-<script type="text/javascript">
-    var disqus_config = function () {
-        this.page.url = 'http://wangmiao.me/2017/04/04/PHP-命名空间/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://wangmiao.me/2017/04/04/PHP-命名空间/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-</script>
-<script type="text/ls-javascript" id="disqus-thread-script">
-    queue.offer(function() {
-            (function() { // DON'T EDIT BELOW THIS LINE
-                var d = document;
-                var s = d.createElement('script');
-                s.src = '//kathyflores.disqus.com/embed.js';
-                s.setAttribute('data-timestamp', + new Date());
-                (d.head || d.body).appendChild(s);
-            })();
-        });
-</script>
+    <!-- 使用 Gitalk -->
+<div id="gitalk-comment">
+    <!-- Gitalk 评论框 -->
+<div id="gitalk-container"></div>
 
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<script>
+    var gitalk = new Gitalk({
+            clientID: '13ccc096aa6286ef098a',
+            clientSecret: '7a77d4a088ec72639c617d913218a4fe15d2f003',
+            repo: 'KathyFlores.github.io',
+            owner: 'KathyFlores',
+            admin: ['KathyFlores'],
+            // facebook-like distraction free mode
+            distractionFreeMode: false
+        })
+   gitalk.render('gitalk-container')
+</script>
 </div>
 <style>
-    #disqus-comment{
+    #gitalk-comment {
         background-color: #eee;
         padding: 2pc;
     }
@@ -1113,8 +1130,7 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 
-   <!-- 使用 DISQUS js 代码 -->
-<script id="dsq-count-scr" src="//kathyflores.disqus.com/count.js" async></script>
+   <!-- GitTalk -->
 
 
 
@@ -1131,6 +1147,12 @@ It will not impact the appearance and can give developers a lot of support :)
 
 <!-- Import prettify js  -->
 
+    
+        
+            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
+        
+    
+
 
 
 <!-- Window Load -->
@@ -1141,6 +1163,13 @@ It will not impact the appearance and can give developers a lot of support :)
         $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
     });
 
+    
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
+        
     
     
 </script>
