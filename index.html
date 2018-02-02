@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Kathy&#39;s Tuple</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Kathy&#39;s Tuple">
+<meta property="og:url" content="http://wangmiao.me/index.html">
+<meta property="og:site_name" content="Kathy&#39;s Tuple">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Kathy&#39;s Tuple">
+  
+    <link rel="alternate" href="/atom.xml" title="Kathy&#39;s Tuple" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Kathy&#39;s Tuple</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Just relax!</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://wangmiao.me"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-AVL树" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/05/01/AVL树/" class="article-date">
+  <time datetime="2017-05-01T00:47:35.000Z" itemprop="datePublished">2017-05-01</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/数据结构/">数据结构</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/01/AVL树/">AVL树</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="数据结构-AVL树"><a href="#数据结构-AVL树" class="headerlink" title="数据结构 - AVL树"></a>数据结构 - AVL树</h1><blockquote>
+<p>今天在复习ADS，想在博客上把这些东西整理一下，就按照复习顺序来好了。</p>
+</blockquote>
+<h2 id="1-定义"><a href="#1-定义" class="headerlink" title="1 定义"></a>1 定义</h2><p>AVL树，即Adelson-Velskii-Landis Tree，是一种自平衡的二叉查找树。AVL树中，每个节点的两个子树的高度差最大为<strong>1</strong>，即\$\frac{a}{b}\$所以也被称为<em>高度平衡树</em>。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://wangmiao.me/2017/05/01/AVL树/" data-id="cjd5j3p9t0003ogfyvjarwgfc" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据结构/">数据结构</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-PHP-命名空间" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/04/PHP-命名空间/" class="article-date">
+  <time datetime="2017-04-04T15:12:04.000Z" itemprop="datePublished">2017-04-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/PHP/">PHP</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/04/PHP-命名空间/">PHP 命名空间</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="命名空间"><a href="#命名空间" class="headerlink" title="命名空间"></a>命名空间</h1><hr>
+<blockquote>
+<p>今天被计组的bug折磨了将近一整天，现在有点头昏脑胀。命名空间这节学的乱七八糟的，大多都是copy文档。之后有时间再慢慢消化。（又挖了个坑）清明假期终于要结束了，我还真是什么都没做呢，sad</p>
+</blockquote>
+<p><strong>命名空间</strong>是在PHP 5.3中加入的，最明确的目的就是解决重名问题。</p>
+<h2 id="1-定义命名空间"><a href="#1-定义命名空间" class="headerlink" title="1 定义命名空间"></a>1 定义命名空间</h2><p>命名空间通过namespace声明，声明必须在其他代码前。<br>可以在同一文件中定义不同的命名空间。</p>
+<p>命名空间有两种定义方式：</p>
+<pre><code class="php">&lt; ?php  
+namespace MyProject1;  
+// MyProject1 命名空间中的PHP代码  
+
+namespace MyProject2;  
+// MyProject2 命名空间中的PHP代码    
+
+// 另一种定义方式
+namespace MyProject3 
+{  
+ // MyProject3 命名空间中的PHP代码    
+}  
+?&gt;
+</code></pre>
+<p>在声明命名空间之前不能出现任何非PHP代码（包括空白符），唯一合法的代码是用于定义文件编码方式的语句，即<strong>程序脚本</strong>的第一条语句必须是<strong>命名空间声明</strong>或<strong>编码声明</strong>。</p>
+<p>例如：</p>
+<pre><code class="php">&lt;?php
+declare(encoding=&#39;UTF-8&#39;); //定义多个命名空间和不包含在命名空间中的代码
+namespace MyProject 
+{
+    const CONNECT_OK = 1;
+    class Connection { /* ... */ }
+    function connect() { /* ... */  }
+}
+
+namespace 
+{ // 全局代码
+    session_start();
+    $a = MyProject\connect();
+    echo MyProject\Connection::start();//类似文件路径的语法： \空间名\元素名
+}
+?&gt;
+</code></pre>
+<h2 id="2-命名空间使用"><a href="#2-命名空间使用" class="headerlink" title="2 命名空间使用"></a>2 命名空间使用</h2><p>PHP命名空间中的类名可以通过三种方式引用：</p>
+<p>1 <strong>非限定名称，或不包含前缀的类名</strong><br>    例如 $comment = new Comment();。如果当前命名空间是Blog\Article，Comment将被解析为Blog\Article\Comment。如果使用Comment的代码不包含在任何命名空间中的代码（全局空间中），则Comment会被解析为Comment。<br>    NOTE: 若命名空间中的函数或常量未定义，则该名称会被解析为全局名称。</p>
+<p>2 <strong>限定名称，或包含前缀的名称</strong><br>    例如 $comment = new Article\Comment();。如果当前的命名空间是Blog，则Comment会被解析为Blog\Article\Comment。如果使用Comment的代码不包含在任何命名空间中的代码（全局空间中），则Comment会被解析为Comment。</p>
+<p>3 <strong>完全限定名称，或包含了全局前缀操作符的名称</strong><br>    例如 $comment = new \Article\Comment();。在这种情况下，Comment总是被解析为代码中的文字名(literal name)Article\Comment。</p>
+<p>这三者可以类比为文件名，相对路径名和绝对路径名。<br>NOTE: 访问任意全局类，函数或常量都可以使用完全限定名称。<br>例如：</p>
+<pre><code class="php">&lt;?php
+namespace Foo;
+
+function strlen() {}
+const INI_ALL = 3;
+class Exception {}
+
+$a = \strlen(&#39;hi&#39;); // 调用全局函数strlen
+$b = \INI_ALL; // 访问全局常量 INI_ALL
+$c = new \Exception(&#39;error&#39;); // 实例化全局类 Exception
+?&gt;
+</code></pre>
+<h2 id="3-子命名空间"><a href="#3-子命名空间" class="headerlink" title="3 子命名空间"></a>3 子命名空间</h2><p>PHP允许指定层次化的命名空间。<br>子空间也可以定义多层。</p>
+<p>例如：</p>
+<pre><code class="php">&lt;?php
+//我用这样的命名空间表示处于blog下的article模块
+namespace Blog\Article;
+class Comment { }
+
+//我用这样的命名空间表示处于blog下的message board模块
+namespace Blog\MessageBoard;
+class Comment { }
+
+//调用当前空间即MessageBoard的类
+$comment = new Comment();
+//调用Blog\Article空间的类
+$article_comment = new \Blog\Article\Comment();
+?&gt;
+</code></pre>
+<h2 id="4-别名和导入"><a href="#4-别名和导入" class="headerlink" title="4 别名和导入"></a>4 别名和导入</h2><p>别名和导入可以看作是调用命名空间元素的一种快捷方式。<br><em>PHP不支持导入函数或常量。</em><br><strong>别名与导入都是通过use操作符实现</strong>,别名：use…as…;导入：use…;（这一点很像SQL，笑）<br>NOTE: 注意导入时两个命名空间不能有相同名字的元素。</p>
+<pre><code class="php">&lt;?php
+namespace Blog\Article;
+class Comment { }
+
+//创建一个BBS空间
+namespace BBS;
+//导入一个命名空间
+use Blog\Article;
+//导入命名空间后可使用限定名称调用元素
+$article_comment = new Article\Comment();
+
+//为命名空间使用别名
+use Blog\Article as Arte;
+//使用别名代替空间名
+$article_comment = new Arte\Comment();
+
+//导入一个类
+use Blog\Article\Comment;
+//导入类后可使用非限定名称调用元素
+$article_comment = new Comment();
+//为类使用别名
+use Blog\Article\Comment as Comt;
+//使用别名代替空间名
+$article_comment = new Comt();
+?&gt;
+</code></pre>
+<h2 id="5-namespace关键字与-NAMESPACE-常量"><a href="#5-namespace关键字与-NAMESPACE-常量" class="headerlink" title="5 namespace关键字与__NAMESPACE__常量"></a>5 namespace关键字与__NAMESPACE__常量</h2><ul>
+<li>关键字namespace可以用来显示访问当前命名空间或子命名空间中的元素，等价于类中的self操作符。</li>
+<li>常量__NAMESPACE__的值是包含当前命名空间名称的字符串。全局中的不包括在任何命名空间中的代码，该常量为一个空的字符串。 </li>
+</ul>
+<h2 id="6-命名空间的顺序"><a href="#6-命名空间的顺序" class="headerlink" title="6 命名空间的顺序"></a>6 命名空间的顺序</h2><p>PHP中名称解析遵循以下规则：</p>
+<p>1 对<strong>完全限定名称</strong>的函数，类和常量的调用在编译时解析。例如 new \A\B 解析为类 A\B。</p>
+<p>2 所有的<strong>非限定名称和限定名称（非完全限定名称）</strong>根据当前的导入规则在编译时进行转换。例如，如果命名空间 A\B\C 被导入为 C，那么对 C\D\e() 的调用就会被转换为 A\B\C\D\e()。 </p>
+<p>3 在命名空间内部，所有的<em>没有根据导入规则转换</em>的<strong>限定名称</strong>均会在其前面加上当前的命名空间名称。例如，在命名空间 A\B 内部调用 C\D\e()，则 C\D\e() 会被转换为 A\B\C\D\e() 。</p>
+<p>4 <strong>非限定类名称</strong>根据当前的导入规则在编译时转换（用全名代替短的导入名称）。例如，如果命名空间 A\B\C 导入为C，则 new C() 被转换为 new A\B\C() 。 </p>
+<p>5 在命名空间内部，对<strong>非限定名称</strong>的函数调用是在运行时解析的。<br>  例如对函数 foo() 的调用是这样解析的：</p>
+<ul>
+<li><p>在当前命名空间中查找名为 A\B\foo() 的函数</p>
+</li>
+<li><p>尝试查找并调用 全局(global) 空间中的函数 foo()。</p>
+</li>
+</ul>
+<p>6 在命名空间内部对<strong>非限定名称或限定名称类（非完全限定名称）</strong>的调用是在运行时解析的。</p>
+<p>  例如调用new C()时的解析过程：</p>
+<ul>
+<li>在当前命名空间中查找A\B\C类。 </li>
+<li><p>尝试自动加载类A\B\C。</p>
+<p>而new D\E()的解析过程：</p>
+</li>
+<li><p>在类名称前面加上当前命名空间名称变成：A\B\D\E，然后查找该类。 </p>
+</li>
+<li>尝试自动加载类 A\B\D\E。 </li>
+</ul>
+<p>以一个例子解释（例子来源：<a href="http://www.golaravel.com/php/language.namespaces.rules.html" target="_blank" rel="noopener">PHP中文手册</a>）:</p>
+<pre><code class="php">
+&lt;?php
+namespace A;
+use B\D, C\E as F;
+
+// 函数调用
+
+foo();      // 首先尝试调用定义在命名空间&quot;A&quot;中的函数foo()
+            // 再尝试调用全局函数 &quot;foo&quot;
+
+\foo();     // 调用全局空间函数 &quot;foo&quot; 
+
+my\foo();   // 调用定义在命名空间&quot;A\my&quot;中函数 &quot;foo&quot; 
+
+F();        // 首先尝试调用定义在命名空间&quot;A&quot;中的函数 &quot;F&quot; 
+            // 再尝试调用全局函数 &quot;F&quot;
+
+// 类引用
+
+new B();    // 创建命名空间 &quot;A&quot; 中定义的类 &quot;B&quot; 的一个对象
+            // 如果未找到，则尝试自动装载类 &quot;A\B&quot;
+
+new D();    // 使用导入规则，创建命名空间 &quot;B&quot; 中定义的类 &quot;D&quot; 的一个对象
+            // 如果未找到，则尝试自动装载类 &quot;B\D&quot;
+
+new F();    // 使用导入规则，创建命名空间 &quot;C&quot; 中定义的类 &quot;E&quot; 的一个对象
+            // 如果未找到，则尝试自动装载类 &quot;C\E&quot;
+
+new \B();   // 创建定义在全局空间中的类 &quot;B&quot; 的一个对象
+            // 如果未发现，则尝试自动装载类 &quot;B&quot;
+
+new \D();   // 创建定义在全局空间中的类 &quot;D&quot; 的一个对象
+            // 如果未发现，则尝试自动装载类 &quot;D&quot;
+
+new \F();   // 创建定义在全局空间中的类 &quot;F&quot; 的一个对象
+            // 如果未发现，则尝试自动装载类 &quot;F&quot;
+
+// 调用另一个命名空间中的静态方法或命名空间函数
+
+B\foo();    // 调用命名空间 &quot;A\B&quot; 中函数 &quot;foo&quot;
+
+B::foo();   // 调用命名空间 &quot;A&quot; 中定义的类 &quot;B&quot; 的 &quot;foo&quot; 方法
+            // 如果未找到类 &quot;A\B&quot; ，则尝试自动装载类 &quot;A\B&quot;
+
+D::foo();   // 使用导入规则，调用命名空间 &quot;B&quot; 中定义的类 &quot;D&quot; 的 &quot;foo&quot; 方法
+            // 如果类 &quot;B\D&quot; 未找到，则尝试自动装载类 &quot;B\D&quot;
+
+\B\foo();   // 调用命名空间 &quot;B&quot; 中的函数 &quot;foo&quot; 
+
+\B::foo();  // 调用全局空间中的类 &quot;B&quot; 的 &quot;foo&quot; 方法
+            // 如果类 &quot;B&quot; 未找到，则尝试自动装载类 &quot;B&quot;
+
+// 当前命名空间中的静态方法或函数
+
+A\B::foo();   // 调用命名空间 &quot;A\A&quot; 中定义的类 &quot;B&quot; 的 &quot;foo&quot; 方法
+              // 如果类 &quot;A\A\B&quot; 未找到，则尝试自动装载类 &quot;A\A\B&quot;
+
+\A\B::foo();  // 调用命名空间 &quot;A\B&quot; 中定义的类 &quot;B&quot; 的 &quot;foo&quot; 方法
+              // 如果类 &quot;A\B&quot; 未找到，则尝试自动装载类 &quot;A\B&quot;
+?&gt;
+</code></pre>
+<p>滚去睡觉了，goodnight。</p>
+<hr>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://wangmiao.me/2017/04/04/PHP-命名空间/" data-id="cjd5j3p9y0006ogfyxiz1schc" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PHP/">PHP</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Introduction-of-IU-First-Edition" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/02/Introduction-of-IU-First-Edition/" class="article-date">
+  <time datetime="2017-04-02T12:15:51.000Z" itemprop="datePublished">2017-04-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/html/">html</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/02/Introduction-of-IU-First-Edition/">Introduction of IU - First Edition</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="HTML学习-Introduction-of-IU-1st-Edition"><a href="#HTML学习-Introduction-of-IU-1st-Edition" class="headerlink" title="HTML学习 - Introduction of IU(1st Edition)"></a>HTML学习 - Introduction of IU(1st Edition)</h1><hr>
+<p>这两天在<a href="http://www.freecodecamp.cn/" target="_blank" rel="noopener">FreeCodeCamp</a>上学习前端（顺便推荐一下这个网站），第一个project是写一个<a href="http://www.freecodecamp.cn/challenges/build-a-tribute-page" target="_blank" rel="noopener">Tribute page</a>。刚好最近沉迷于女神IU的美色无法自拔，就用纯html为IU写了个Introduction Page，数据来源<a href="https://en.wikipedia.org/wiki/IU(singer)" target="_blank" rel="noopener">Wiki Pedia</a>。</p>
+<p>第一版为了在FreeCodeCamp上提交project，写得很粗略，布局配色什么的也都没考虑。先贴地址: <a href="https://kathyflores.github.io/FreeCodeCamp/Build_a_Tribute_Page/IU_page.html" target="_blank" rel="noopener">IU_page</a>.</p>
+<p>主要利用了bootstrap框架，最近学的东西有点多，来不及写bootstrap的笔记了，之后补上。</p>
+<p>最后附上源码：</p>
+<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+      &lt;meta charset=&quot;utf-8&quot;&gt;
+            &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.bootcss.com/bootstrap/3.3.1/css/bootstrap.min.css&quot;/&gt;
+            &lt;!-- bootstrap --&gt;
+            &lt;style&gt;
+                body {
+                  margin-top: 60px;
+                  background-color: #F5F5F5;
+                }
+            &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+            &lt;div class=&quot;container&quot;&gt;
+              &lt;div class=&quot;row clearfix&quot;&gt;
+                &lt;div class=&quot;col-xs-12 column&quot;&gt;
+                  &lt;div class=&quot;jumbotron&quot;&gt;
+                    &lt;h1 class=&quot;text-primary&quot;&gt;Lee Ji-eun&lt;/h1&gt;
+                    &lt;p&gt;&lt;strong&gt;Lee Ji-eun&lt;/strong&gt; (Korean: &lt;span&gt;이지은&lt;/span&gt;; born May 16, 1993), better known by her stage name &lt;span class=&quot;text-primary&quot;&gt;&lt;strong&gt;IU&lt;/strong&gt;&lt;/span&gt; (Korean: &lt;span&gt;아이유&lt;/span&gt;), is a South Korean singer, songwriter and actress.&lt;/p&gt;
+                    &lt;img class=&quot;img-rounded img-responsive center-block&quot; src=&quot;https://kathyflores.github.io/img/pic1.jpg&quot;&gt;
+                    &lt;p&gt;
+                      &lt;/br&gt;
+                      &lt;a class=&quot;btn btn-primary btn-large&quot; href=&quot;https://en.wikipedia.org/wiki/IU_(singer)&quot; target=&quot;_blank&quot;&gt;Learn more&lt;/a&gt;
+                    &lt;/p&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;row clearfix&quot;&gt;
+                &lt;div class=&quot;col-xs-6 column&quot;&gt;
+                  &lt;h2 class=&quot;text-center text-info&quot;&gt;&lt;strong&gt;Career&lt;/strong&gt;&lt;/h2&gt;
+                  &lt;ul&gt;
+                    &lt;li&gt;&lt;strong&gt;2008–2009&lt;/strong&gt;: Career beginnings&lt;/li&gt;
+                    &lt;li&gt;&lt;strong&gt;2010–2011&lt;/strong&gt;: Rising popularity and acting debut&lt;/li&gt;
+                    &lt;li&gt;&lt;strong&gt;2012&lt;/strong&gt;: Japanese debut and first solo concert tour&lt;/li&gt;
+                    &lt;li&gt;&lt;strong&gt;2013&lt;/strong&gt;: First starring roles and Modern Times&lt;/li&gt;
+                    &lt;li&gt;&lt;strong&gt;2014&lt;/strong&gt;: A Flower Bookmark&lt;/li&gt;
+                    &lt;li&gt;&lt;strong&gt;2015–2016&lt;/strong&gt;: The Producers, Infinite Challenge, Chat-Shire, and Moon Lovers: Scarlet Heart Ryeo&lt;/li&gt;
+                    &lt;li&gt;&lt;strong&gt;2017–present&lt;/strong&gt;: fourth studio album&lt;/li&gt;
+                  &lt;/ul&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;col-xs-6 column&quot;&gt;
+                  &lt;h2 class=&quot;text-center text-info&quot;&gt;&lt;strong&gt;Film&lt;/strong&gt;&lt;/h2&gt;
+                  &lt;/br&gt;
+                  &lt;table class=&quot;table table-hover table-condensed&quot;&gt;
+                    &lt;thead&gt;
+                      &lt;tr&gt;
+                        &lt;th&gt;Year&lt;/th&gt;
+                        &lt;th&gt;Title&lt;/th&gt;
+                        &lt;th&gt;Role&lt;/th&gt;
+                        &lt;th&gt;Notes&lt;/th&gt;
+                      &lt;/tr&gt;
+                    &lt;/thead&gt;
+                    &lt;tbody&gt;
+                      &lt;tr&gt;
+                        &lt;td&gt;2012&lt;/td&gt;
+                        &lt;td&gt;A Turtle&#39;s Tale 2: Sammy&#39;s Escape from Paradise&lt;/td&gt;
+                        &lt;td&gt;Ella&lt;/td&gt;
+                        &lt;td&gt;Korean dub&lt;/td&gt;
+                      &lt;/tr&gt;
+                      &lt;tr&gt;
+                        &lt;td&gt;2017&lt;/td&gt;
+                        &lt;td&gt;Real&lt;/td&gt;
+                        &lt;td&gt;&lt;/td&gt;
+                        &lt;td&gt;Cameo&lt;/td&gt;
+                      &lt;/tr&gt;
+                    &lt;/tbody&gt;
+                  &lt;/table&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;/br&gt;
+              &lt;div class=&quot;row clearfix&quot;&gt;
+                &lt;div class=&quot;col-xs-12 column&quot;&gt;
+                  &lt;h2 class=&quot;text-center text-info&quot;&gt;&lt;strong&gt;Television drama&lt;/strong&gt;&lt;/h2&gt;
+                  &lt;table class=&quot;table table-condensed table-hover&quot;&gt;
+                    &lt;thead&gt;
+                      &lt;tr&gt;
+                        &lt;th&gt;Year&lt;/th&gt;
+                        &lt;th&gt;Title&lt;/th&gt;
+                        &lt;th&gt;Role&lt;/th&gt;
+                        &lt;th&gt;Notes&lt;/th&gt;
+                      &lt;/tr&gt;
+                    &lt;/thead&gt;
+                    &lt;tbody&gt;
+                      &lt;tr&gt;
+                        &lt;td&gt;2011&lt;/td&gt;
+                        &lt;td&gt;Dream High&lt;/td&gt;
+                        &lt;td&gt;Kim Pil-suk&lt;/td&gt;
+                        &lt;td&gt;Main cast:
+                          &lt;ul&gt;
+                            &lt;li&gt;Nominated – KBS Drama Award for Best New Actress&lt;/li&gt;
+                            &lt;li&gt;Nominated – KBS Drama Award for Best Couple with Jang Wooyoung&lt;/li&gt;
+                            &lt;li&gt;Nominated – Baeksang Arts Award for Most Popular Actress (TV)&lt;/li&gt;
+                            &lt;li&gt;Nominated – Mnet Asian Music&lt;/li&gt;
+                            &lt;li&gt;Award for Best O.S.T. for Someday&lt;/li&gt;
+                          &lt;/ul&gt;
+                        &lt;/td&gt;
+                      &lt;/tr&gt;
+                      &lt;tr&gt;
+                        &lt;td&gt;2011&lt;/td&gt;
+                        &lt;td&gt;Welcome to the Show&lt;/td&gt;
+                        &lt;td&gt;Herself&lt;/td&gt;
+                        &lt;td&gt;Episode 1&lt;/td&gt;
+                      &lt;/tr&gt;
+                      &lt;tr&gt;
+                        &lt;td&gt;2012&lt;/td&gt;
+                        &lt;td&gt;Dream High 2&lt;/td&gt;
+                        &lt;td&gt;Kim Pil-suk&lt;/td&gt;
+                        &lt;td&gt;Episode 1 (cameo)&lt;/td&gt;
+                      &lt;/tr&gt;
+                      &lt;tr&gt;
+                        &lt;td&gt;2012&lt;/td&gt;
+                        &lt;td&gt;Salamander Guru and The Shadows&lt;/td&gt;
+                        &lt;td&gt;Pickpocket Jieun&lt;/td&gt;
+                        &lt;td&gt;Episode 6 (cameo)&lt;/td&gt;
+                      &lt;/tr&gt;
+                      &lt;tr&gt;
+                        &lt;td&gt;2013&lt;/td&gt;
+                        &lt;td&gt;You&#39;re the Best, Lee Soon-shin&lt;/td&gt;
+                        &lt;td&gt;Lee Soon-shin&lt;/td&gt;
+                        &lt;td&gt;Lead role:
+                          &lt;ul&gt;
+                            &lt;li&gt;Won – KBS Drama Award for Best New Actress (also for Bel Ami)&lt;/li&gt;
+                            &lt;li&gt;Won – KBS Drama Award for Best Couple with Jo Jung-suk&lt;/li&gt;
+                            &lt;li&gt;Nominated – KBS Drama Awards&#39; Excellence Award for Actress in a Serial Drama&lt;/li&gt;
+                            &lt;li&gt;Nominated – Baeksang Arts Award for Most Popular Actress (TV)&lt;/li&gt;
+                          &lt;/ul&gt;
+                        &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;tr&gt;
+                                    &lt;td&gt;2013&lt;/td&gt;
+                                    &lt;td&gt;Bel Ami&lt;/td&gt;
+                                    &lt;td&gt;Kim Bo-tong&lt;/td&gt;
+                                    &lt;td&gt;Lead role:
+                                        &lt;ul&gt;
+                                            &lt;li&gt;Won – KBS Drama Award for Best New Actress (also for You&#39;re the Best, Lee Soon-shin)&lt;/li&gt;
+                                            &lt;li&gt;Nominated – KBS Drama Award for Best Couple with Jang Keun-suk&lt;/li&gt;
+                                            &lt;li&gt;Nominated – Seoul International Drama Award for Outstanding Korean Actress&lt;/li&gt;
+                                            &lt;li&gt;Nominated – Seoul International Youth Film Festival for Best Young Actress&lt;/li&gt;
+                                        &lt;/ul&gt;
+                                    &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;tr&gt;
+                                    &lt;td&gt;2015&lt;/td&gt;
+                                    &lt;td&gt;The Producers&lt;/td&gt;
+                                    &lt;td&gt;Cindy&lt;/td&gt;
+                                    &lt;td&gt;Lead role:
+                                        &lt;ul&gt;
+                                            &lt;li&gt;Nominated – KBS Drama Awards&#39; Popularity Award for Actress&lt;/li&gt;
+                                            &lt;li&gt;Nominated – KBS Drama Award for Best Couple with Kim Soo-hyun&lt;/li&gt;
+                                            &lt;li&gt;Nominated – Korea Drama Awards&#39; Excellence Award for Actress&lt;/li&gt;
+                                            &lt;li&gt;Nominated – APAN Star Awards&#39; Excellence Award for Actress in a Miniseries&lt;/li&gt;
+                                        &lt;/ul&gt;
+                                    &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;tr&gt;
+                                    &lt;td&gt;2016&lt;/td&gt;
+                                    &lt;td&gt;Moon Lovers: Scarlet Heart Ryeo&lt;/td&gt;
+                                    &lt;td&gt;Go Ha-jin/Hae-soo&lt;/td&gt;
+                                    &lt;td&gt;Lead role:
+                                        &lt;ul&gt;
+                                            &lt;li&gt;Won – SBS Drama Awards Best Couple Award with Lee Joon-gi&lt;/li&gt;
+                                            &lt;li&gt;Won – SBS Drama Awards Idol Academy Award, Heart-wrenching Award&lt;/li&gt;
+                                            &lt;li&gt;Nominated – SBS Drama Awards K-Wave (Hallyu) Star Award&lt;/li&gt;
+                                        &lt;/ul&gt;
+                                    &lt;/td&gt;
+                                &lt;/tr&gt;
+                    &lt;/tbody&gt;
+                  &lt;/table&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;footer class=&quot;text-center&quot;&gt;
+                  &lt;hr&gt;
+                  &lt;p&gt;© Coded by &lt;a href=&quot;https://github.com/KathyFlores&quot; target=&quot;_blank&quot;&gt;KathyFlores&lt;/p&gt;
+              &lt;/footer&gt;
+            &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>最后的最后，再推荐一个可以在线编辑HTML、CSS、JS的网站，个人觉得还不错：<a href="https://codepen.io/" target="_blank" rel="noopener">https://codepen.io/</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://wangmiao.me/2017/04/02/Introduction-of-IU-First-Edition/" data-id="cjd5j3p9v0004ogfyp9ukofag" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-PHP-魔术变量" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/01/PHP-魔术变量/" class="article-date">
+  <time datetime="2017-04-01T15:57:27.000Z" itemprop="datePublished">2017-04-01</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/PHP/">PHP</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/01/PHP-魔术变量/">PHP魔术变量</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="魔术变量"><a href="#魔术变量" class="headerlink" title="魔术变量"></a>魔术变量</h1><hr>
+<p>PHP在设计的时候已经预定义了9个超级全局变量、8个魔术变量和13魔术函数，这些变量与函数可以在脚本的任何地方使用（不用预先声明）。魔术变量不区分大小写。</p>
+<h2 id="1-LINE"><a href="#1-LINE" class="headerlink" title="1 __LINE__"></a>1 <strong>__LINE__</strong></h2><p>文件中的 <em>当前行号</em> 。<br>EXAMPLE:</p>
+<pre><code class="php">&lt;?php
+echo &#39;这是第 &quot; &#39;  . __LINE__ . &#39; &quot; 行&#39;;
+?&gt;
+</code></pre>
+<p><strong>OUTPUT</strong>: 这是第 “ 2 “ 行</p>
+<h2 id="2-FILE"><a href="#2-FILE" class="headerlink" title="2 __FILE__"></a>2 <strong>__FILE__</strong></h2><p>文件的 <em>完整路径</em> 和 <em>文件名</em> 。<br>若用在被包含文件中，则返回被包含的文件名。<br>NOTE: 超全局变量$_SERVER[‘PHP_SELF’]只返回文件名，而无绝对路径。<br>EXAMPLE:</p>
+<pre><code class="php">&lt;?php
+echo &#39;该文件位于 &quot; &#39;  . __FILE__ . &#39; &quot; &#39;;
+?&gt;
+</code></pre>
+<p><strong>OUTPUT</strong>: 该文件位于 “ D:\php-7.1.3-src\Apache24\htdocs\getuser.php “ </p>
+<h2 id="3-DIR"><a href="#3-DIR" class="headerlink" title="3 __DIR__"></a>3 <strong>__DIR__</strong></h2><p>文件 <em>所在的目录</em> 。<br>若用在被包括文件中，则返回被包括的文件所在的目录。<br>等价于dirname(__FILE__)。<br>NOTE：不包括末尾的斜杠，除非是根目录。<br>EXAMPLE:</p>
+<pre><code class="php">&lt;?php
+echo &#39;该文件位于 &quot; &#39;  . __DIR__ . &#39; &quot; &#39;;
+?&gt;
+</code></pre>
+<p><strong>OUTPUT</strong>: 该文件位于 “ D:\php-7.1.3-src\Apache24\htdocs “</p>
+<h2 id="4-FUNCTION"><a href="#4-FUNCTION" class="headerlink" title="4 __FUNCTION__"></a>4 <strong>__FUNCTION__</strong></h2><p><em>函数名称</em> （区分大小写）。<br>EXAMPLE:</p>
+<pre><code class="php">&lt;?php
+function test() 
+{
+    echo  &#39;函数名为：&#39; . __FUNCTION__ ;
+}
+test();
+?&gt;
+</code></pre>
+<p><strong>OUTPUT</strong>: 函数名为：test </p>
+<h2 id="5-CLASS"><a href="#5-CLASS" class="headerlink" title="5 __CLASS__"></a>5 <strong>__CLASS__</strong></h2><p><em>类的名称</em> （区分大小写）。<br>NOTE:</p>
+<ul>
+<li>类名包括其被声明的作用区域。</li>
+<li>对trait也起作用，在trait方法中使用，返回调用trait的类的名字。</li>
+</ul>
+<p>EXAMPLE:</p>
+<pre><code class="php">&lt;?php
+class test 
+{
+    function _print() 
+    {
+        echo &#39;类名为：&#39;  . __CLASS__ . &quot;&lt;br&gt;&quot;;
+    }
+}
+$t = new test();
+$t-&gt;_print();
+?&gt;
+</code></pre>
+<p><strong>OUTPUT</strong>: 类名为：test</p>
+<h2 id="6-TRAIT"><a href="#6-TRAIT" class="headerlink" title="6 __TRAIT__"></a>6 <strong>__TRAIT__</strong></h2><p><em>Trait的名字</em> 。<br>NOTE: trait名字包括其被声明的作用区域。<br>EXAMPLE:</p>
+<pre><code class="php">&lt;?php
+class Base 
+{
+    public function sayHello() 
+    {
+        echo &#39;Hello &#39;;
+    }
+}
+trait SayWorld {
+    public function sayHello() 
+    {
+        parent::sayHello();
+        echo &#39;World!&#39;.__TRAIT__;
+    }
+}
+class MyHelloWorld extends Base 
+{
+    use SayWorld;
+}
+$o = new MyHelloWorld();
+$o-&gt;sayHello();
+?&gt;
+</code></pre>
+<p><strong>OUTPUT</strong>: Hello World!SayWorld </p>
+<h2 id="7-METHOD"><a href="#7-METHOD" class="headerlink" title="7 __METHOD__"></a>7 <strong>__METHOD__</strong></h2><p><em>方法名</em> ，与__FUNCTION__类似。</p>
+<h2 id="8-NAMESPACE"><a href="#8-NAMESPACE" class="headerlink" title="8 __NAMESPACE__"></a>8 <strong>__NAMESPACE__</strong></h2><p><em>当前命名空间的名称</em> ，在编译时定义。<br>EXAMPLE:</p>
+<pre><code class="php">&lt;?php
+namespace MyProject;
+echo &#39;命名空间为：&quot;&#39;, __NAMESPACE__, &#39;&quot;&#39;;
+?&gt;
+</code></pre>
+<p><strong>OUTPUT</strong>: 命名空间为：MyProject</p>
+<hr>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://wangmiao.me/2017/04/01/PHP-魔术变量/" data-id="cjd5j3pa00009ogfypy7b7nhs" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PHP/">PHP</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/03/31/hello-world/" class="article-date">
+  <time datetime="2017-03-31T15:59:00.000Z" itemprop="datePublished">2017-03-31</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/31/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="For-testing"><a href="#For-testing" class="headerlink" title="For testing :)"></a>For testing :)</h2>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://wangmiao.me/2017/03/31/hello-world/" data-id="cjd5j3pa2000aogfyw8be0ueo" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/PHP/">PHP</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/html/">html</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/">数据结构</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/PHP/">PHP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">html</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据结构/">数据结构</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/PHP/" style="font-size: 20px;">PHP</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/数据结构/" style="font-size: 10px;">数据结构</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/05/01/AVL树/">AVL树</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/04/PHP-命名空间/">PHP 命名空间</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/02/Introduction-of-IU-First-Edition/">Introduction of IU - First Edition</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/01/PHP-魔术变量/">PHP魔术变量</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/31/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 Kathy Flores<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

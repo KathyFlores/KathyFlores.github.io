@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>PHP 命名空间 | Kathy&#39;s Tuple</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="命名空间  今天被计组的bug折磨了将近一整天，现在有点头昏脑胀。命名空间这节学的乱七八糟的，大多都是copy文档。之后有时间再慢慢消化。（又挖了个坑）清明假期终于要结束了，我还真是什么都没做呢，sad  命名空间是在PHP 5.3中加入的，最明确的目的就是解决重名问题。 1 定义命名空间命名空间通过namespace声明，声明必须在其他代码前。可以在同一文件中定义不同的命名空间。 命名空间有两种">
+<meta name="keywords" content="PHP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHP 命名空间">
+<meta property="og:url" content="http://wangmiao.me/2017/04/04/PHP-命名空间/index.html">
+<meta property="og:site_name" content="Kathy&#39;s Tuple">
+<meta property="og:description" content="命名空间  今天被计组的bug折磨了将近一整天，现在有点头昏脑胀。命名空间这节学的乱七八糟的，大多都是copy文档。之后有时间再慢慢消化。（又挖了个坑）清明假期终于要结束了，我还真是什么都没做呢，sad  命名空间是在PHP 5.3中加入的，最明确的目的就是解决重名问题。 1 定义命名空间命名空间通过namespace声明，声明必须在其他代码前。可以在同一文件中定义不同的命名空间。 命名空间有两种">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-04-23T02:23:47.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PHP 命名空间">
+<meta name="twitter:description" content="命名空间  今天被计组的bug折磨了将近一整天，现在有点头昏脑胀。命名空间这节学的乱七八糟的，大多都是copy文档。之后有时间再慢慢消化。（又挖了个坑）清明假期终于要结束了，我还真是什么都没做呢，sad  命名空间是在PHP 5.3中加入的，最明确的目的就是解决重名问题。 1 定义命名空间命名空间通过namespace声明，声明必须在其他代码前。可以在同一文件中定义不同的命名空间。 命名空间有两种">
+  
+    <link rel="alternate" href="/atom.xml" title="Kathy&#39;s Tuple" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Kathy&#39;s Tuple</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Just relax!</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://wangmiao.me"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-PHP-命名空间" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/04/PHP-命名空间/" class="article-date">
+  <time datetime="2017-04-04T15:12:04.000Z" itemprop="datePublished">2017-04-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/PHP/">PHP</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      PHP 命名空间
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="命名空间"><a href="#命名空间" class="headerlink" title="命名空间"></a>命名空间</h1><hr>
+<blockquote>
+<p>今天被计组的bug折磨了将近一整天，现在有点头昏脑胀。命名空间这节学的乱七八糟的，大多都是copy文档。之后有时间再慢慢消化。（又挖了个坑）清明假期终于要结束了，我还真是什么都没做呢，sad</p>
+</blockquote>
+<p><strong>命名空间</strong>是在PHP 5.3中加入的，最明确的目的就是解决重名问题。</p>
+<h2 id="1-定义命名空间"><a href="#1-定义命名空间" class="headerlink" title="1 定义命名空间"></a>1 定义命名空间</h2><p>命名空间通过namespace声明，声明必须在其他代码前。<br>可以在同一文件中定义不同的命名空间。</p>
+<p>命名空间有两种定义方式：</p>
+<pre><code class="php">&lt; ?php  
+namespace MyProject1;  
+// MyProject1 命名空间中的PHP代码  
+
+namespace MyProject2;  
+// MyProject2 命名空间中的PHP代码    
+
+// 另一种定义方式
+namespace MyProject3 
+{  
+ // MyProject3 命名空间中的PHP代码    
+}  
+?&gt;
+</code></pre>
+<p>在声明命名空间之前不能出现任何非PHP代码（包括空白符），唯一合法的代码是用于定义文件编码方式的语句，即<strong>程序脚本</strong>的第一条语句必须是<strong>命名空间声明</strong>或<strong>编码声明</strong>。</p>
+<p>例如：</p>
+<pre><code class="php">&lt;?php
+declare(encoding=&#39;UTF-8&#39;); //定义多个命名空间和不包含在命名空间中的代码
+namespace MyProject 
+{
+    const CONNECT_OK = 1;
+    class Connection { /* ... */ }
+    function connect() { /* ... */  }
+}
+
+namespace 
+{ // 全局代码
+    session_start();
+    $a = MyProject\connect();
+    echo MyProject\Connection::start();//类似文件路径的语法： \空间名\元素名
+}
+?&gt;
+</code></pre>
+<h2 id="2-命名空间使用"><a href="#2-命名空间使用" class="headerlink" title="2 命名空间使用"></a>2 命名空间使用</h2><p>PHP命名空间中的类名可以通过三种方式引用：</p>
+<p>1 <strong>非限定名称，或不包含前缀的类名</strong><br>    例如 $comment = new Comment();。如果当前命名空间是Blog\Article，Comment将被解析为Blog\Article\Comment。如果使用Comment的代码不包含在任何命名空间中的代码（全局空间中），则Comment会被解析为Comment。<br>    NOTE: 若命名空间中的函数或常量未定义，则该名称会被解析为全局名称。</p>
+<p>2 <strong>限定名称，或包含前缀的名称</strong><br>    例如 $comment = new Article\Comment();。如果当前的命名空间是Blog，则Comment会被解析为Blog\Article\Comment。如果使用Comment的代码不包含在任何命名空间中的代码（全局空间中），则Comment会被解析为Comment。</p>
+<p>3 <strong>完全限定名称，或包含了全局前缀操作符的名称</strong><br>    例如 $comment = new \Article\Comment();。在这种情况下，Comment总是被解析为代码中的文字名(literal name)Article\Comment。</p>
+<p>这三者可以类比为文件名，相对路径名和绝对路径名。<br>NOTE: 访问任意全局类，函数或常量都可以使用完全限定名称。<br>例如：</p>
+<pre><code class="php">&lt;?php
+namespace Foo;
+
+function strlen() {}
+const INI_ALL = 3;
+class Exception {}
+
+$a = \strlen(&#39;hi&#39;); // 调用全局函数strlen
+$b = \INI_ALL; // 访问全局常量 INI_ALL
+$c = new \Exception(&#39;error&#39;); // 实例化全局类 Exception
+?&gt;
+</code></pre>
+<h2 id="3-子命名空间"><a href="#3-子命名空间" class="headerlink" title="3 子命名空间"></a>3 子命名空间</h2><p>PHP允许指定层次化的命名空间。<br>子空间也可以定义多层。</p>
+<p>例如：</p>
+<pre><code class="php">&lt;?php
+//我用这样的命名空间表示处于blog下的article模块
+namespace Blog\Article;
+class Comment { }
+
+//我用这样的命名空间表示处于blog下的message board模块
+namespace Blog\MessageBoard;
+class Comment { }
+
+//调用当前空间即MessageBoard的类
+$comment = new Comment();
+//调用Blog\Article空间的类
+$article_comment = new \Blog\Article\Comment();
+?&gt;
+</code></pre>
+<h2 id="4-别名和导入"><a href="#4-别名和导入" class="headerlink" title="4 别名和导入"></a>4 别名和导入</h2><p>别名和导入可以看作是调用命名空间元素的一种快捷方式。<br><em>PHP不支持导入函数或常量。</em><br><strong>别名与导入都是通过use操作符实现</strong>,别名：use…as…;导入：use…;（这一点很像SQL，笑）<br>NOTE: 注意导入时两个命名空间不能有相同名字的元素。</p>
+<pre><code class="php">&lt;?php
+namespace Blog\Article;
+class Comment { }
+
+//创建一个BBS空间
+namespace BBS;
+//导入一个命名空间
+use Blog\Article;
+//导入命名空间后可使用限定名称调用元素
+$article_comment = new Article\Comment();
+
+//为命名空间使用别名
+use Blog\Article as Arte;
+//使用别名代替空间名
+$article_comment = new Arte\Comment();
+
+//导入一个类
+use Blog\Article\Comment;
+//导入类后可使用非限定名称调用元素
+$article_comment = new Comment();
+//为类使用别名
+use Blog\Article\Comment as Comt;
+//使用别名代替空间名
+$article_comment = new Comt();
+?&gt;
+</code></pre>
+<h2 id="5-namespace关键字与-NAMESPACE-常量"><a href="#5-namespace关键字与-NAMESPACE-常量" class="headerlink" title="5 namespace关键字与__NAMESPACE__常量"></a>5 namespace关键字与__NAMESPACE__常量</h2><ul>
+<li>关键字namespace可以用来显示访问当前命名空间或子命名空间中的元素，等价于类中的self操作符。</li>
+<li>常量__NAMESPACE__的值是包含当前命名空间名称的字符串。全局中的不包括在任何命名空间中的代码，该常量为一个空的字符串。 </li>
+</ul>
+<h2 id="6-命名空间的顺序"><a href="#6-命名空间的顺序" class="headerlink" title="6 命名空间的顺序"></a>6 命名空间的顺序</h2><p>PHP中名称解析遵循以下规则：</p>
+<p>1 对<strong>完全限定名称</strong>的函数，类和常量的调用在编译时解析。例如 new \A\B 解析为类 A\B。</p>
+<p>2 所有的<strong>非限定名称和限定名称（非完全限定名称）</strong>根据当前的导入规则在编译时进行转换。例如，如果命名空间 A\B\C 被导入为 C，那么对 C\D\e() 的调用就会被转换为 A\B\C\D\e()。 </p>
+<p>3 在命名空间内部，所有的<em>没有根据导入规则转换</em>的<strong>限定名称</strong>均会在其前面加上当前的命名空间名称。例如，在命名空间 A\B 内部调用 C\D\e()，则 C\D\e() 会被转换为 A\B\C\D\e() 。</p>
+<p>4 <strong>非限定类名称</strong>根据当前的导入规则在编译时转换（用全名代替短的导入名称）。例如，如果命名空间 A\B\C 导入为C，则 new C() 被转换为 new A\B\C() 。 </p>
+<p>5 在命名空间内部，对<strong>非限定名称</strong>的函数调用是在运行时解析的。<br>  例如对函数 foo() 的调用是这样解析的：</p>
+<ul>
+<li><p>在当前命名空间中查找名为 A\B\foo() 的函数</p>
+</li>
+<li><p>尝试查找并调用 全局(global) 空间中的函数 foo()。</p>
+</li>
+</ul>
+<p>6 在命名空间内部对<strong>非限定名称或限定名称类（非完全限定名称）</strong>的调用是在运行时解析的。</p>
+<p>  例如调用new C()时的解析过程：</p>
+<ul>
+<li>在当前命名空间中查找A\B\C类。 </li>
+<li><p>尝试自动加载类A\B\C。</p>
+<p>而new D\E()的解析过程：</p>
+</li>
+<li><p>在类名称前面加上当前命名空间名称变成：A\B\D\E，然后查找该类。 </p>
+</li>
+<li>尝试自动加载类 A\B\D\E。 </li>
+</ul>
+<p>以一个例子解释（例子来源：<a href="http://www.golaravel.com/php/language.namespaces.rules.html" target="_blank" rel="noopener">PHP中文手册</a>）:</p>
+<pre><code class="php">
+&lt;?php
+namespace A;
+use B\D, C\E as F;
+
+// 函数调用
+
+foo();      // 首先尝试调用定义在命名空间&quot;A&quot;中的函数foo()
+            // 再尝试调用全局函数 &quot;foo&quot;
+
+\foo();     // 调用全局空间函数 &quot;foo&quot; 
+
+my\foo();   // 调用定义在命名空间&quot;A\my&quot;中函数 &quot;foo&quot; 
+
+F();        // 首先尝试调用定义在命名空间&quot;A&quot;中的函数 &quot;F&quot; 
+            // 再尝试调用全局函数 &quot;F&quot;
+
+// 类引用
+
+new B();    // 创建命名空间 &quot;A&quot; 中定义的类 &quot;B&quot; 的一个对象
+            // 如果未找到，则尝试自动装载类 &quot;A\B&quot;
+
+new D();    // 使用导入规则，创建命名空间 &quot;B&quot; 中定义的类 &quot;D&quot; 的一个对象
+            // 如果未找到，则尝试自动装载类 &quot;B\D&quot;
+
+new F();    // 使用导入规则，创建命名空间 &quot;C&quot; 中定义的类 &quot;E&quot; 的一个对象
+            // 如果未找到，则尝试自动装载类 &quot;C\E&quot;
+
+new \B();   // 创建定义在全局空间中的类 &quot;B&quot; 的一个对象
+            // 如果未发现，则尝试自动装载类 &quot;B&quot;
+
+new \D();   // 创建定义在全局空间中的类 &quot;D&quot; 的一个对象
+            // 如果未发现，则尝试自动装载类 &quot;D&quot;
+
+new \F();   // 创建定义在全局空间中的类 &quot;F&quot; 的一个对象
+            // 如果未发现，则尝试自动装载类 &quot;F&quot;
+
+// 调用另一个命名空间中的静态方法或命名空间函数
+
+B\foo();    // 调用命名空间 &quot;A\B&quot; 中函数 &quot;foo&quot;
+
+B::foo();   // 调用命名空间 &quot;A&quot; 中定义的类 &quot;B&quot; 的 &quot;foo&quot; 方法
+            // 如果未找到类 &quot;A\B&quot; ，则尝试自动装载类 &quot;A\B&quot;
+
+D::foo();   // 使用导入规则，调用命名空间 &quot;B&quot; 中定义的类 &quot;D&quot; 的 &quot;foo&quot; 方法
+            // 如果类 &quot;B\D&quot; 未找到，则尝试自动装载类 &quot;B\D&quot;
+
+\B\foo();   // 调用命名空间 &quot;B&quot; 中的函数 &quot;foo&quot; 
+
+\B::foo();  // 调用全局空间中的类 &quot;B&quot; 的 &quot;foo&quot; 方法
+            // 如果类 &quot;B&quot; 未找到，则尝试自动装载类 &quot;B&quot;
+
+// 当前命名空间中的静态方法或函数
+
+A\B::foo();   // 调用命名空间 &quot;A\A&quot; 中定义的类 &quot;B&quot; 的 &quot;foo&quot; 方法
+              // 如果类 &quot;A\A\B&quot; 未找到，则尝试自动装载类 &quot;A\A\B&quot;
+
+\A\B::foo();  // 调用命名空间 &quot;A\B&quot; 中定义的类 &quot;B&quot; 的 &quot;foo&quot; 方法
+              // 如果类 &quot;A\B&quot; 未找到，则尝试自动装载类 &quot;A\B&quot;
+?&gt;
+</code></pre>
+<p>滚去睡觉了，goodnight。</p>
+<hr>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://wangmiao.me/2017/04/04/PHP-命名空间/" data-id="cjd5j3p9y0006ogfyxiz1schc" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PHP/">PHP</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/05/01/AVL树/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          AVL树
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/04/02/Introduction-of-IU-First-Edition/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Introduction of IU - First Edition</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/PHP/">PHP</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/html/">html</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/">数据结构</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/PHP/">PHP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">html</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据结构/">数据结构</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/PHP/" style="font-size: 20px;">PHP</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/数据结构/" style="font-size: 10px;">数据结构</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/05/01/AVL树/">AVL树</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/04/PHP-命名空间/">PHP 命名空间</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/02/Introduction-of-IU-First-Edition/">Introduction of IU - First Edition</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/01/PHP-魔术变量/">PHP魔术变量</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/31/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 Kathy Flores<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
