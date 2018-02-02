@@ -4,7 +4,7 @@
     
     <entry>
       <title><![CDATA[test]]></title>
-      <url>/2018/02/02/test/</url>
+      <url>/title.html</url>
       <content type="html"><![CDATA[<p>a test</p>
 ]]></content>
       
@@ -13,7 +13,7 @@
     
     <entry>
       <title><![CDATA[AVL树]]></title>
-      <url>/2017/05/01/AVL%E6%A0%91/</url>
+      <url>/title.html</url>
       <content type="html"><![CDATA[<h1 id="数据结构-AVL树"><a href="#数据结构-AVL树" class="headerlink" title="数据结构 - AVL树"></a>数据结构 - AVL树</h1><blockquote>
 <p>今天在复习ADS，想在博客上把这些东西整理一下，就按照复习顺序来好了。</p>
 </blockquote>
@@ -37,7 +37,7 @@
     
     <entry>
       <title><![CDATA[PHP 命名空间]]></title>
-      <url>/2017/04/04/PHP-%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4/</url>
+      <url>/title.html</url>
       <content type="html"><![CDATA[<h1 id="命名空间"><a href="#命名空间" class="headerlink" title="命名空间"></a>命名空间</h1><hr>
 <blockquote>
 <p>今天被计组的bug折磨了将近一整天，现在有点头昏脑胀。命名空间这节学的乱七八糟的，大多都是copy文档。之后有时间再慢慢消化。（又挖了个坑）清明假期终于要结束了，我还真是什么都没做呢，sad</p>
@@ -249,7 +249,7 @@ A\B::foo();   // 调用命名空间 &quot;A\A&quot; 中定义的类 &quot;B&quot
     
     <entry>
       <title><![CDATA[Introduction of IU - First Edition]]></title>
-      <url>/2017/04/02/Introduction-of-IU-First-Edition/</url>
+      <url>/title.html</url>
       <content type="html"><![CDATA[<h1 id="HTML学习-Introduction-of-IU-1st-Edition"><a href="#HTML学习-Introduction-of-IU-1st-Edition" class="headerlink" title="HTML学习 - Introduction of IU(1st Edition)"></a>HTML学习 - Introduction of IU(1st Edition)</h1><hr>
 <p>这两天在<a href="http://www.freecodecamp.cn/" target="_blank" rel="noopener">FreeCodeCamp</a>上学习前端（顺便推荐一下这个网站），第一个project是写一个<a href="http://www.freecodecamp.cn/challenges/build-a-tribute-page" target="_blank" rel="noopener">Tribute page</a>。刚好最近沉迷于女神IU的美色无法自拔，就用纯html为IU写了个Introduction Page，数据来源<a href="https://en.wikipedia.org/wiki/IU(singer)" target="_blank" rel="noopener">Wiki Pedia</a>。</p>
 <p>第一版为了在FreeCodeCamp上提交project，写得很粗略，布局配色什么的也都没考虑。先贴地址: <a href="https://kathyflores.github.io/FreeCodeCamp/Build_a_Tribute_Page/IU_page.html" target="_blank" rel="noopener">IU_page</a>.</p>
@@ -454,7 +454,7 @@ A\B::foo();   // 调用命名空间 &quot;A\A&quot; 中定义的类 &quot;B&quot
     
     <entry>
       <title><![CDATA[PHP魔术变量]]></title>
-      <url>/2017/04/01/PHP-%E9%AD%94%E6%9C%AF%E5%8F%98%E9%87%8F/</url>
+      <url>/title.html</url>
       <content type="html"><![CDATA[<h1 id="魔术变量"><a href="#魔术变量" class="headerlink" title="魔术变量"></a>魔术变量</h1><hr>
 <p>PHP在设计的时候已经预定义了9个超级全局变量、8个魔术变量和13魔术函数，这些变量与函数可以在脚本的任何地方使用（不用预先声明）。魔术变量不区分大小写。</p>
 <h2 id="1-LINE"><a href="#1-LINE" class="headerlink" title="1 __LINE__"></a>1 <strong>__LINE__</strong></h2><p>文件中的 <em>当前行号</em> 。<br>EXAMPLE:</p>
