@@ -1,5 +1,5 @@
-http://wangmiao.me/2018/02/02/test/
-http://wangmiao.me/2017/05/01/AVL树/
-http://wangmiao.me/2017/04/04/PHP-命名空间/
-http://wangmiao.me/2017/04/02/Introduction-of-IU-First-Edition/
-http://wangmiao.me/2017/04/01/PHP-魔术变量/
+http://kathyf3.com/2018/02/02/test/
+http://kathyf3.com/2017/05/01/AVL树/
+http://kathyf3.com/2017/04/04/PHP-命名空间/
+http://kathyf3.com/2017/04/02/Introduction-of-IU-First-Edition/
+http://kathyf3.com/2017/04/01/PHP-魔术变量/
