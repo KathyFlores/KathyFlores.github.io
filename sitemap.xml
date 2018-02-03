@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+      <loc>http://wangmiao.me/2018/02/03/test/</loc>
+    
+    <lastmod>2018-02-03T04:44:05.503Z</lastmod>
+    
+  </url>
+  
+  <url>
       <loc>http://wangmiao.me/2017/04/04/PHP-%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4/</loc>
     
     <lastmod>2018-02-02T14:46:28.129Z</lastmod>
@@ -19,13 +26,6 @@
       <loc>http://wangmiao.me/2017/04/02/Introduction-of-IU-First-Edition/</loc>
     
     <lastmod>2018-02-02T14:28:49.471Z</lastmod>
-    
-  </url>
-  
-  <url>
-      <loc>http://wangmiao.me/2018/02/02/test/</loc>
-    
-    <lastmod>2018-02-02T14:22:50.645Z</lastmod>
     
   </url>
   
