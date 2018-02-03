@@ -535,31 +535,34 @@
                 <!-- Post Comments -->
                 
                     
-    <!-- 使用 gitcoment -->
-<div id="gitment-comment">
-    <!-- Gitment 评论框 -->
-<div id="container"></div>
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://kathyf3.xyz/2018/02/03/test/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://kathyf3.xyz/2018/02/03/test/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//kathyflores.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
 </div>
 <style>
-    #gitment-comment{
+    #disqus-comment{
         background-color: #eee;
         padding: 2pc;
     }
 </style>
-<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-<script>
-    var gitment = new Gitment({
-        //id: '页面 ID', // 可选。默认为 location.href
-        owner: 'KathyFlores',
-        repo: 'KathyFlores.github.io',
-        oauth: {
-            client_id: '13ccc096aa6286ef098a',
-            client_secret: '7a77d4a088ec72639c617d913218a4fe15d2f003',
-        },
-    })
-    gitment.render('container')
-</script>
 
                 
             </div>
@@ -923,7 +926,8 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 
-   <!-- Gitment -->
+   <!-- 使用 DISQUS js 代码 -->
+<script id="dsq-count-scr" src="//kathyflores.disqus.com/count.js" async></script>
 
 
 
