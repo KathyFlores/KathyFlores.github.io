@@ -45,7 +45,7 @@
     
     <title>
         
-            标签: PHP | 
+            博客搭建-material主题下评论系统完善 | 
         
         Kathy&#39;s Tuple
     </title>
@@ -83,6 +83,9 @@
         <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
         
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/tranquil-heart.min.css?ul3p9I9MsbOxK0L+BHzDDg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
             
         
 
@@ -219,7 +222,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Kathy&#39;s Tuple">
-    <meta name="msapplication-starturl" content="http://kathyf3.com/tags/PHP/">
+    <meta name="msapplication-starturl" content="http://kathyf3.com/2018/02/20/博客搭建-material主题下评论系统完善/">
     <meta name="msapplication-navbutton-color" content="#8e8e90">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Kathy&#39;s Tuple">
@@ -234,13 +237,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://kathyf3.com/tags/PHP/">
+    <meta property="og:url" content="http://kathyf3.com/2018/02/20/博客搭建-material主题下评论系统完善/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="标签: PHP | Kathy&#39;s Tuple">
+    <meta property="og:title" content="博客搭建-material主题下评论系统完善 | Kathy&#39;s Tuple">
     <meta property="og:image" content="http://op2b3idv8.bkt.clouddn.com/favicon.png">
     <meta property="og:description" content="">
     
 
+    
+        <meta property="article:published_time" content="Tue Feb 20 2018 22:40:13 GMT+0800">
+        <meta property="article:modified_time" content="Tue Feb 20 2018 23:31:57 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -248,13 +254,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://kathyf3.com/tags/PHP/index.html" />
+        <link rel="canonical" href="http://kathyf3.com/2018/02/20/博客搭建-material主题下评论系统完善/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://kathyf3.com/2018/02/20/博客搭建-material主题下评论系统完善/index.html",
+    "headline": "博客搭建-material主题下评论系统完善",
+    "datePublished": "Tue Feb 20 2018 22:40:13 GMT+0800",
+    "dateModified": "Tue Feb 20 2018 23:31:57 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Kathy Flores",
+        "image": {
+            "@type": "ImageObject",
+            "url": "http://op2b3idv8.bkt.clouddn.com/a1.png"
+        },
+        "description": "Welcome to Kathy's Tuple!"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Kathy&#39;s Tuple",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "http://op2b3idv8.bkt.clouddn.com/favicon.png"
+        }
+    },
+    "keywords": "Kathy&#39;s Tuple",
+    "description": "",
+}
+</script>
 
 
     
@@ -301,166 +337,355 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#gitment与gitalk比较"><span class="post-toc-number">1.</span> <span class="post-toc-text">gitment与gitalk比较</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#gitalk配置过程"><span class="post-toc-number">2.</span> <span class="post-toc-text">gitalk配置过程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-注册-OAuth-Application"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">1. 注册 OAuth Application</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-在material主题配置文件中修改相关配置"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">2. 在material主题配置文件中修改相关配置</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-部署"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">3. 部署</span></a></li></ol></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/04/04/PHP-命名空间/">PHP 命名空间</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            命名空间
-
-今天被计组的bug折磨了将近一整天，现在有点头昏脑胀。命名空间这节学的乱七八糟的，大多都是copy文档。之后有时间再慢慢消化。（又挖了个坑）清明假期终于要结束了，我还真是什么都没做呢，sad
-
-命名空间是在PHP 5.3中加入的，最明确的目的就是解决重名问题。
-
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/04/04/PHP-命名空间/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="http://op2b3idv8.bkt.clouddn.com/a1.png" width="44px" height="44px" alt="Kathy Flores's avatar">
-            </div>
-            <div>
-                <strong>Kathy Flores</strong>
-                <span>4月 04, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/PHP/">PHP</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/04/01/PHP-魔术变量/">PHP魔术变量</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            魔术变量
-PHP在设计的时候已经预定义了9个超级全局变量、8个魔术变量和13魔术函数，这些变量与函数可以在脚本的任何地方使用（不用预先声明）。魔术变量不区分大小写。
-1 __LINE__文件中的 当前行号 。
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/04/01/PHP-魔术变量/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="http://op2b3idv8.bkt.clouddn.com/a1.png" width="44px" height="44px" alt="Kathy Flores's avatar">
-            </div>
-            <div>
-                <strong>Kathy Flores</strong>
-                <span>4月 01, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/PHP/">PHP</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', 'http://op28obaxv.bkt.clouddn.com/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', 'http://op28obaxv.bkt.clouddn.com/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                博客搭建-material主题下评论系统完善
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="http://op2b3idv8.bkt.clouddn.com/a1.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Kathy Flores</strong>
+        <span>2月 20, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAEOCAAAAABd2qZ5AAADlUlEQVR42u3aS27bQBAFQN3/0snWgCDqvZ4ZWraLK0NRxOniotmfxz/Xl+uBAAcOHDhw4MCBAweOD+Z4xNfX7z///fJmwW9e/9rzHa/PlseCAwcOHDjOcSQhJUFef7/95Ple7TmjWHDgwIEDxzGOWXjrqTcP/tVpl2LBgQMHDhzfypGnzOujtyG1J8GBAwcOHL+JIwksuWPSRvwBiRYHDhw4/jBH0lDLg5yl0hxrpYDEgQMHDhynOdYXGj7n74/Y78CBAweOP8zRXrOhVFuMJU3GfNHhTUQ4cODAgWMrx2z1OS+f6rQ3Khdnv48DBw4cOE5zrCy6tekw525PlSxb4MCBAweOcxztekGe5NrjzlDyBQscOHDgwHEnRx5A2yhs03be+MsLyDffwYEDBw4cWzlmA6E8jc1ah7Pm4OwB48CBAweOExz54CcfDiXrCC1rix6tX+DAgQMHjts5Zk3AnCYvvWajqTf/igMHDhw4jnHMjtgm6ZV2Yb7KUDQoceDAgQPHVo7roySlVz6aate4d33y5vs4cODAgeMwR55c82FSQpMUaTlosfCHAwcOHDiOceQF0j1twb2lJg4cOHDguJ+jXYNeYd21Qj17eDhw4MCB4x6OlZTZJsiVtYlZkTl878CBAwcOHCVH3hBs01ibqvPfaU/1hgwHDhw4cBzj2DXOycdLSaLNXwI2LDTgwIEDB45ljpWUNiu02nZkUqS1oDhw4MCB4zRHe4iVZl/dvCsfTx4XDhw4cOA4wbGSPnOgfByVcxdFWtscxIEDBw4cCxwrKMlxk2TcBt+m2+F7Bw4cOHDg2MqRB9YuENQl1mgEtaE5iAMHDhw4RhyzNYI81PZaeUh5kYkDBw4cOO7haIdJ+VhoNjrKw24HYDhw4MCB4xzHrFiaJbxZSNsS6qv74sCBAweOYxx7W3J5wks+ycOum4w4cODAgWMrR75A0DYH8wZf/gu7Go44cODAgeMcR3vlSXG9wGtLytkjxIEDBw4cezlWirHrwikpomZDr5WRFQ4cOHDguIdjNsJZGRHN/m9SpNXLEDhw4MCB4xhHuwyX8OVjobZZmbwoJGfGgQMHDhzfy5GE3Y6a2kJu5bUABw4cOHB8PkebSvPW5K6Sr97vwIEDBw4cmzjWU1cyNEoKsLwVOBs+4cCBAweO0xztQsOs2ZccfZbU82FYVMLhwIEDB44FDhcOHDhw4MCBAwcOHDg+7PoPrqNTvJrF/AEAAAAASUVORK5CYII=">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=博客搭建-material主题下评论系统完善&url=http://kathyf3.com/2018/02/20/博客搭建-material主题下评论系统完善/index.html&pic=http://kathyf3.comhttp://op28obaxv.bkt.clouddn.com/material-1.png/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=博客搭建-material主题下评论系统完善&url=http://kathyf3.com/2018/02/20/博客搭建-material主题下评论系统完善/index.html&via=Kathy Flores" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://kathyf3.com/2018/02/20/博客搭建-material主题下评论系统完善/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://kathyf3.com/2018/02/20/博客搭建-material主题下评论系统完善/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Kathy&#39;s Tuple&title=博客搭建-material主题下评论系统完善&summary=&pics=http://kathyf3.comhttp://op28obaxv.bkt.clouddn.com/material-1.png/img/favicon.png&url=http://kathyf3.com/2018/02/20/博客搭建-material主题下评论系统完善/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
     
 </div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>博客搭建至今，共尝试使用过很多个评论系统（如disqus、多说、gitment、gitalk等），我对评论系统大致有以下三点要求：1. 不用翻墙 2. 无需备案 3. 方便快捷。综合考虑，原本多说是比较好的一个选择，但是由于种种原因，多说在2017年6月已经关闭服务了，我便采用了disqus，但是奈何需要翻墙，总是让我这个强迫症有一点不爽。直到放了寒假，要把博客数据挪到mac上时才发现有了gitment和gitalk这两款利用github的issue功能搭建起来的轻便版评论系统，正合我意啊！因此便开始了不到黄河心不死，不撞南墙不回头的瞎鼓捣之旅。。。</p>
+<h3 id="gitment与gitalk比较"><a href="#gitment与gitalk比较" class="headerlink" title="gitment与gitalk比较"></a>gitment与gitalk比较</h3><p><strong>同</strong></p>
+<ul>
+<li>均在前端直接引入，不需要后端代码</li>
+<li>支持md、gfm和代码高亮</li>
+<li>使用github账号登陆</li>
+</ul>
+<p><strong>异</strong></p>
+<ul>
+<li>gitment需要手动初始化每一篇的评论，而gitalk不需要</li>
+</ul>
+<p>虽然我的文章也不算多，但是由于实在太懒，便选择了gitalk。</p>
+<p>链接附上：</p>
+<p>gitment <a href="https://github.com/imsun/gitment" target="_blank" rel="noopener">https://github.com/imsun/gitment</a></p>
+<p>gitalk <a href="https://github.com/gitalk/gitalk" target="_blank" rel="noopener">https://github.com/gitalk/gitalk</a></p>
+<h3 id="gitalk配置过程"><a href="#gitalk配置过程" class="headerlink" title="gitalk配置过程"></a>gitalk配置过程</h3><p>详细的配置过程如其github的readme，由于我用的material主题内嵌了这两个评论系统，配置过程不大一样，便在此说明。</p>
+<h4 id="1-注册-OAuth-Application"><a href="#1-注册-OAuth-Application" class="headerlink" title="1. 注册 OAuth Application"></a>1. 注册 OAuth Application</h4><p><a href="https://github.com/settings/applications/new" target="_blank" rel="noopener">点击此处</a> 来注册一个新的 OAuth Application。如实填写，注意最后一个callback url要填写自己博客的url。注册成功后得到一个client ID和client secret。</p>
+<h4 id="2-在material主题配置文件中修改相关配置"><a href="#2-在material主题配置文件中修改相关配置" class="headerlink" title="2. 在material主题配置文件中修改相关配置"></a>2. 在material主题配置文件中修改相关配置</h4><pre><code class="yaml"># themes/material/_config.yml
+...
+comment:
+    use: &quot;gitalk&quot;
+
+    ...
+    # gitment配置同gitalk
+    gitment_repo: KathyFlores.github.io  # git repo of the hexo
+    gitment_owner: KathyFlores # git repo&#39;s owner
+    gitment_client_id: xxx # github app client id 第一步中得到的client ID
+    gitment_client_secret : xxx # github app client secret 第一步中得到的client secret
+    ...
+
+    gitalk_repo: KathyFlores.github.io # git repo of the hexo
+    gitalk_owner: KathyFlores # git repo&#39;s owner
+    gitalk_client_id: xxx # github app client id 第一步中得到的client ID
+    gitalk_client_secret: xxx # github app client secret 第一步中得到的client secret
+...
+</code></pre>
+<h4 id="3-部署"><a href="#3-部署" class="headerlink" title="3. 部署"></a>3. 部署</h4><p>正常情况下，部署以后就会看到文章下成功出现了gitalk评论系统，登陆github账户以后也可以正常评论。但是我在实践过程中遇到了一个谜一样的报错：Error: Validation Failed。去gitalk项目的issue区看了看有一个人和我遇到了同样的问题，但不知道是什么原因，后来我发现是因为创建gitalk时会将当前post的url作为label创建一个issue，而issue的label长度最大只支持50个字符，如果文章标题有过多中文或长度太长，都会产生这个问题。</p>
+<p>后续issue区有人提出，自行设定创建gitalk的id参数即可，可以用md5对url进行加密，也可直接截取前50个字符。我为了方便，选择了截取文章标题的前49个字符，在material主题下，只需修改themes/material/layout/_widget/gitalk/main.ejs:</p>
+<pre><code class="ejs">&lt;!-- Gitalk 评论框 --&gt;
+&lt;div id=&quot;gitalk-container&quot;&gt;&lt;/div&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/gitalk/dist/gitalk.css&quot;&gt;
+
+&lt;script src=&quot;https://unpkg.com/gitalk/dist/gitalk.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script&gt;
+    var gitalk = new Gitalk({
+            clientID: &#39;&lt;%= theme.comment.gitalk_client_id %&gt;&#39;,
+            clientSecret: &#39;&lt;%= theme.comment.gitalk_client_secret %&gt;&#39;,
+            repo: &#39;&lt;%= theme.comment.gitalk_repo %&gt;&#39;,
+            owner: &#39;&lt;%= theme.comment.gitalk_owner %&gt;&#39;,
+            admin: [&#39;&lt;%= theme.comment.gitalk_owner %&gt;&#39;],
+            // facebook-like distraction free mode
+            id: &#39;&lt;%=  page.title.substr(0,48) %&gt;&#39;, // 加了这一行
+            distractionFreeMode: false
+        })
+   gitalk.render(&#39;gitalk-container&#39;)
+&lt;/script&gt;
+</code></pre>
+<p>若使用gitment，具体做法类似，修改themes/material/layout/_widget/gitment/enter.ejs:</p>
+<pre><code class="ejs">&lt;!-- 使用 gitcoment --&gt;
+&lt;div id=&quot;gitment-comment&quot;&gt;
+    &lt;%- partial(&#39;_widget/comment/&#39; + theme.comment.use + &#39;/main&#39;) %&gt;
+&lt;/div&gt;
+&lt;style&gt;
+    #gitment-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+&lt;/style&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://imsun.github.io/gitment/style/default.css&quot;&gt;
+&lt;script src=&quot;https://imsun.github.io/gitment/dist/gitment.browser.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+    var gitment = new Gitment({
+        //id: &#39;页面 ID&#39;, // 可选。默认为 location.href
+        id: &#39;&lt;%=  page.title.substr(0,48) %&gt;&#39;, // 加上这一行
+        owner: &#39;&lt;%= theme.comment.gitment_owner %&gt;&#39;,
+        repo: &#39;&lt;%= theme.comment.gitment_repo %&gt;&#39;,
+        oauth: {
+            client_id: &#39;&lt;%= theme.comment.gitment_client_id %&gt;&#39;,
+            client_secret: &#39;&lt;%= theme.comment.gitment_client_secret %&gt;&#39;,
+        },
+    })
+    gitment.render(&#39;container&#39;)
+&lt;/script&gt;
+</code></pre>
+<p>md5加密方法与我的做法大同小异，具体可参见<a href="https://priesttomb.github.io/日常/2018/02/12/处理Gitalk中由于文章URL过长导致的Validation-Failed(422" target="_blank" rel="noopener">@<strong>PriestTomb</strong>的文章</a>/)。</p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 Gitalk -->
+<div id="gitalk-comment">
+    <!-- Gitalk 评论框 -->
+<div id="gitalk-container"></div>
+
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<script>
+    var gitalk = new Gitalk({
+            clientID: '13ccc096aa6286ef098a',
+            clientSecret: '7a77d4a088ec72639c617d913218a4fe15d2f003',
+            repo: 'KathyFlores.github.io',
+            owner: 'KathyFlores',
+            admin: ['KathyFlores'],
+            // facebook-like distraction free mode
+		id: '博客搭建-material主题下评论系统完善',
+            distractionFreeMode: false
+        })
+   gitalk.render('gitalk-container')
+</script>
+</div>
+<style>
+    #gitalk-comment {
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2018/02/03/test/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
@@ -632,6 +857,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 
@@ -807,6 +1040,10 @@ It will not impact the appearance and can give developers a lot of support :)
 <!-- Import prettify js  -->
 
     
+        
+            <script>lsloader.load("prettify_js","https://cdn.bootcss.com/prettify/r298/prettify.js", true)</script>
+        
+    
 
 
 
@@ -819,6 +1056,11 @@ It will not impact the appearance and can give developers a lot of support :)
     });
 
     
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
         
     
     

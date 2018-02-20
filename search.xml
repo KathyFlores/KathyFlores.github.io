@@ -3,6 +3,101 @@
   
     
     <entry>
+      <title><![CDATA[博客搭建-material主题下评论系统完善]]></title>
+      <url>/2018/02/20/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-material%E4%B8%BB%E9%A2%98%E4%B8%8B%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E5%AE%8C%E5%96%84/</url>
+      <content type="html"><![CDATA[<p>博客搭建至今，共尝试使用过很多个评论系统（如disqus、多说、gitment、gitalk等），我对评论系统大致有以下三点要求：1. 不用翻墙 2. 无需备案 3. 方便快捷。综合考虑，原本多说是比较好的一个选择，但是由于种种原因，多说在2017年6月已经关闭服务了，我便采用了disqus，但是奈何需要翻墙，总是让我这个强迫症有一点不爽。直到放了寒假，要把博客数据挪到mac上时才发现有了gitment和gitalk这两款利用github的issue功能搭建起来的轻便版评论系统，正合我意啊！因此便开始了不到黄河心不死，不撞南墙不回头的瞎鼓捣之旅。。。</p>
+<h3 id="gitment与gitalk比较"><a href="#gitment与gitalk比较" class="headerlink" title="gitment与gitalk比较"></a>gitment与gitalk比较</h3><p><strong>同</strong></p>
+<ul>
+<li>均在前端直接引入，不需要后端代码</li>
+<li>支持md、gfm和代码高亮</li>
+<li>使用github账号登陆</li>
+</ul>
+<p><strong>异</strong></p>
+<ul>
+<li>gitment需要手动初始化每一篇的评论，而gitalk不需要</li>
+</ul>
+<p>虽然我的文章也不算多，但是由于实在太懒，便选择了gitalk。</p>
+<p>链接附上：</p>
+<p>gitment <a href="https://github.com/imsun/gitment" target="_blank" rel="noopener">https://github.com/imsun/gitment</a></p>
+<p>gitalk <a href="https://github.com/gitalk/gitalk" target="_blank" rel="noopener">https://github.com/gitalk/gitalk</a></p>
+<h3 id="gitalk配置过程"><a href="#gitalk配置过程" class="headerlink" title="gitalk配置过程"></a>gitalk配置过程</h3><p>详细的配置过程如其github的readme，由于我用的material主题内嵌了这两个评论系统，配置过程不大一样，便在此说明。</p>
+<h4 id="1-注册-OAuth-Application"><a href="#1-注册-OAuth-Application" class="headerlink" title="1. 注册 OAuth Application"></a>1. 注册 OAuth Application</h4><p><a href="https://github.com/settings/applications/new" target="_blank" rel="noopener">点击此处</a> 来注册一个新的 OAuth Application。如实填写，注意最后一个callback url要填写自己博客的url。注册成功后得到一个client ID和client secret。</p>
+<h4 id="2-在material主题配置文件中修改相关配置"><a href="#2-在material主题配置文件中修改相关配置" class="headerlink" title="2. 在material主题配置文件中修改相关配置"></a>2. 在material主题配置文件中修改相关配置</h4><pre><code class="yaml"># themes/material/_config.yml
+...
+comment:
+    use: &quot;gitalk&quot;
+
+    ...
+    # gitment配置同gitalk
+    gitment_repo: KathyFlores.github.io  # git repo of the hexo
+    gitment_owner: KathyFlores # git repo&#39;s owner
+    gitment_client_id: xxx # github app client id 第一步中得到的client ID
+    gitment_client_secret : xxx # github app client secret 第一步中得到的client secret
+    ...
+
+    gitalk_repo: KathyFlores.github.io # git repo of the hexo
+    gitalk_owner: KathyFlores # git repo&#39;s owner
+    gitalk_client_id: xxx # github app client id 第一步中得到的client ID
+    gitalk_client_secret: xxx # github app client secret 第一步中得到的client secret
+...
+</code></pre>
+<h4 id="3-部署"><a href="#3-部署" class="headerlink" title="3. 部署"></a>3. 部署</h4><p>正常情况下，部署以后就会看到文章下成功出现了gitalk评论系统，登陆github账户以后也可以正常评论。但是我在实践过程中遇到了一个谜一样的报错：Error: Validation Failed。去gitalk项目的issue区看了看有一个人和我遇到了同样的问题，但不知道是什么原因，后来我发现是因为创建gitalk时会将当前post的url作为label创建一个issue，而issue的label长度最大只支持50个字符，如果文章标题有过多中文或长度太长，都会产生这个问题。</p>
+<p>后续issue区有人提出，自行设定创建gitalk的id参数即可，可以用md5对url进行加密，也可直接截取前50个字符。我为了方便，选择了截取文章标题的前49个字符，在material主题下，只需修改themes/material/layout/_widget/gitalk/main.ejs:</p>
+<pre><code class="ejs">&lt;!-- Gitalk 评论框 --&gt;
+&lt;div id=&quot;gitalk-container&quot;&gt;&lt;/div&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/gitalk/dist/gitalk.css&quot;&gt;
+
+&lt;script src=&quot;https://unpkg.com/gitalk/dist/gitalk.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script&gt;
+    var gitalk = new Gitalk({
+            clientID: &#39;&lt;%= theme.comment.gitalk_client_id %&gt;&#39;,
+            clientSecret: &#39;&lt;%= theme.comment.gitalk_client_secret %&gt;&#39;,
+            repo: &#39;&lt;%= theme.comment.gitalk_repo %&gt;&#39;,
+            owner: &#39;&lt;%= theme.comment.gitalk_owner %&gt;&#39;,
+            admin: [&#39;&lt;%= theme.comment.gitalk_owner %&gt;&#39;],
+            // facebook-like distraction free mode
+            id: &#39;&lt;%=  page.title.substr(0,48) %&gt;&#39;, // 加了这一行
+            distractionFreeMode: false
+        })
+   gitalk.render(&#39;gitalk-container&#39;)
+&lt;/script&gt;
+</code></pre>
+<p>若使用gitment，具体做法类似，修改themes/material/layout/_widget/gitment/enter.ejs:</p>
+<pre><code class="ejs">&lt;!-- 使用 gitcoment --&gt;
+&lt;div id=&quot;gitment-comment&quot;&gt;
+    &lt;%- partial(&#39;_widget/comment/&#39; + theme.comment.use + &#39;/main&#39;) %&gt;
+&lt;/div&gt;
+&lt;style&gt;
+    #gitment-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+&lt;/style&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://imsun.github.io/gitment/style/default.css&quot;&gt;
+&lt;script src=&quot;https://imsun.github.io/gitment/dist/gitment.browser.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+    var gitment = new Gitment({
+        //id: &#39;页面 ID&#39;, // 可选。默认为 location.href
+        id: &#39;&lt;%=  page.title.substr(0,48) %&gt;&#39;, // 加上这一行
+        owner: &#39;&lt;%= theme.comment.gitment_owner %&gt;&#39;,
+        repo: &#39;&lt;%= theme.comment.gitment_repo %&gt;&#39;,
+        oauth: {
+            client_id: &#39;&lt;%= theme.comment.gitment_client_id %&gt;&#39;,
+            client_secret: &#39;&lt;%= theme.comment.gitment_client_secret %&gt;&#39;,
+        },
+    })
+    gitment.render(&#39;container&#39;)
+&lt;/script&gt;
+</code></pre>
+<p>md5加密方法与我的做法大同小异，具体可参见<a href="https://priesttomb.github.io/日常/2018/02/12/处理Gitalk中由于文章URL过长导致的Validation-Failed(422" target="_blank" rel="noopener">@<strong>PriestTomb</strong>的文章</a>/)。</p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[test]]></title>
       <url>/2018/02/03/test/</url>
       <content type="html"><![CDATA[<p>test test</p>
