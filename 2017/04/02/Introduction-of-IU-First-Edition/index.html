@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info"/>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            Introduction of IU - First Edition | 
+        
+        Kathy&#39;s Tuple
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="http://op28obaxv.bkt.clouddn.com/material-1.png/img/favicon.png">
+    <link rel="icon" href="http://op2b3idv8.bkt.clouddn.com/favicon.png">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content="Kathy&#39;s Tuple,html">
+    <meta name="theme-color" content="#8e8e90">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/tranquil-heart.min.css?ul3p9I9MsbOxK0L+BHzDDg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+            
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #4472ca;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #223333 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #223333 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #223333 !important;
+  }
+
+  .toTop {
+    background: #125488 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #125488;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #125488;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #125488;
+  }
+
+  .post-toc a:hover {
+    color: #4472ca;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.proxy.ustclug.org/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","https://cdn.bootcss.com/jquery/2.2.0/jquery.js", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Kathy&#39;s Tuple">
+    <meta name="msapplication-starturl" content="http://kathyf3.com/2017/04/02/Introduction-of-IU-First-Edition/">
+    <meta name="msapplication-navbutton-color" content="#8e8e90">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Kathy&#39;s Tuple">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="http://op2b3idv8.bkt.clouddn.com/favicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://kathyf3.com/2017/04/02/Introduction-of-IU-First-Edition/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Introduction of IU - First Edition | Kathy&#39;s Tuple">
+    <meta property="og:image" content="http://op2b3idv8.bkt.clouddn.com/favicon.png">
+    <meta property="og:description" content="">
+    <meta property="og:article:tag" content="html"> 
+
+    
+        <meta property="article:published_time" content="Sun Apr 02 2017 20:15:51 GMT+0800">
+        <meta property="article:modified_time" content="Fri Feb 02 2018 22:28:49 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://kathyf3.com/2017/04/02/Introduction-of-IU-First-Edition/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://kathyf3.com/2017/04/02/Introduction-of-IU-First-Edition/index.html",
+    "headline": "Introduction of IU - First Edition",
+    "datePublished": "Sun Apr 02 2017 20:15:51 GMT+0800",
+    "dateModified": "Fri Feb 02 2018 22:28:49 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Kathy Flores",
+        "image": {
+            "@type": "ImageObject",
+            "url": "http://op2b3idv8.bkt.clouddn.com/a1.png"
+        },
+        "description": "Welcome to Kathy's Tuple!"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Kathy&#39;s Tuple",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "http://op2b3idv8.bkt.clouddn.com/favicon.png"
+        }
+    },
+    "keywords": ",htmlKathy&#39;s Tuple",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+        <script>
+    var _hmt = _hmt || [];
+    (function() {var hm = document.createElement('script');
+    hm.src = 'https://hm.baidu.com/hm.js?54643590e3281ee1a7bc77d5260618ee';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+    
+    
+
+    <!-- Custom Head -->
+    
+        
+            <meta name="baidu-site-verification" content="Mgl8ywlWXZ" /> <meta name="baidu-site-verification" content="1GdEYmO5AK" /> <meta name="baidu-site-verification" content="GPAYeOUjGh" />
+        
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#HTML学习-Introduction-of-IU-1st-Edition"><span class="post-toc-number">1.</span> <span class="post-toc-text">HTML学习 - Introduction of IU(1st Edition)</span></a></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', 'http://op28obaxv.bkt.clouddn.com/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                Introduction of IU - First Edition
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="http://op2b3idv8.bkt.clouddn.com/a1.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Kathy Flores</strong>
+        <span>4月 02, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC0UlEQVR42u3aQXLbQAwEQP//08kDYkszAKsi77ZOKYUmt3kwDAy+/lz5+cLGxsbGxsbGxsb+SPZX/Pn3+p+++eaRL+/20/X53V6fGRsbG/sG9ptf/S8P980DXn6Tk2Z3+PEM2NjY2BewkzKTHyv/qfaJ7ZmxsbGxsZMSldwhahjia7CxsbGx9+y2IOUtxOvrsbGxsbE3Q6W8/Azj2HV4gI2NjX0nuw16P+Hf/yHfxsbGxv5I9lNlJl/c2bQ3qzNjY2NjH8rO//TfUNtxf9RalPfBxsbGPpXd3igf2e9fUB4SR+tB2NjY2Iey86WZNnZty8xsiScpitjY2Nhns/MGIC8b+RrNrBC2oS82Njb22exZ0NuuabYlMx9pFU/BxsbGvoD97Pf5i0tKV/6z2NjY2Lex8zYgf0AbG7e8/KVjY2Nj38Buhz6zcHdz9DZ+roNebGxs7F/Ofmo0/+xoafY66lQEGxsb+wh2MpqfBb1J8ZsNodrQAhsbG/tsdlIS8uWbfUnLR/95QcXGxsa+jd0evW0S9tHvbByGjY2NfQ+7/d9ZW5KXw816EDY2NvY97PYoSQlsx0ObwpmcExsbG/sGdttgtK3CsPAko//Nzik2Njb2Qex8PDSLeGfLnXnZe1NisbGxsQ9lzwpV20js49vNehA2Njb22ewZvh02zQZSs2uKVgQbGxv7CPbmMU+Vn00kXIQK2NjY2Iey96Xoqfh2Bk6aHGxsbOyz2e0R24HRvkVph1nY2NjYt7Hbz7NLNkm7simr2NjY2Dew27WYDSYvh7NG6M1zsbGxsY9mb8ZMbWxQr9rEr+P199jY2Ng3sGeLknm4++ZYZSTcrmBiY2NjY7ewtiANVyqxsbGxsUfBbR4M7MF5I1THA9jY2NjHsWdDpTYAnpWiB4ZT2NjY2Eez26A3KV1JbDC7Zz6iwsbGxr6Bfc8HGxsbGxsbGxsb+2M+fwGIhyCCVmpQ2AAAAABJRU5ErkJggg==">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/html/">html</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Introduction of IU - First Edition&url=http://kathyf3.com/2017/04/02/Introduction-of-IU-First-Edition/index.html&pic=http://kathyf3.comhttp://op28obaxv.bkt.clouddn.com/material-1.png/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Introduction of IU - First Edition&url=http://kathyf3.com/2017/04/02/Introduction-of-IU-First-Edition/index.html&via=Kathy Flores" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://kathyf3.com/2017/04/02/Introduction-of-IU-First-Edition/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://kathyf3.com/2017/04/02/Introduction-of-IU-First-Edition/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Kathy&#39;s Tuple&title=Introduction of IU - First Edition&summary=&pics=http://kathyf3.comhttp://op28obaxv.bkt.clouddn.com/material-1.png/img/favicon.png&url=http://kathyf3.com/2017/04/02/Introduction-of-IU-First-Edition/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="HTML学习-Introduction-of-IU-1st-Edition"><a href="#HTML学习-Introduction-of-IU-1st-Edition" class="headerlink" title="HTML学习 - Introduction of IU(1st Edition)"></a>HTML学习 - Introduction of IU(1st Edition)</h1><hr>
+<p>这两天在<a href="http://www.freecodecamp.cn/" target="_blank" rel="noopener">FreeCodeCamp</a>上学习前端（顺便推荐一下这个网站），第一个project是写一个<a href="http://www.freecodecamp.cn/challenges/build-a-tribute-page" target="_blank" rel="noopener">Tribute page</a>。刚好最近沉迷于女神IU的美色无法自拔，就用纯html为IU写了个Introduction Page，数据来源<a href="https://en.wikipedia.org/wiki/IU(singer)" target="_blank" rel="noopener">Wiki Pedia</a>。</p>
+<p>第一版为了在FreeCodeCamp上提交project，写得很粗略，布局配色什么的也都没考虑。先贴地址: <a href="https://kathyflores.github.io/FreeCodeCamp/Build_a_Tribute_Page/IU_page.html" target="_blank" rel="noopener">IU_page</a>.</p>
+<p>主要利用了bootstrap框架，最近学的东西有点多，来不及写bootstrap的笔记了，之后补上。</p>
+<p>最后附上源码：</p>
+<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+      &lt;meta charset=&quot;utf-8&quot;&gt;
+            &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.bootcss.com/bootstrap/3.3.1/css/bootstrap.min.css&quot;/&gt;
+            &lt;!-- bootstrap --&gt;
+            &lt;style&gt;
+                body {
+                  margin-top: 60px;
+                  background-color: #F5F5F5;
+                }
+            &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+            &lt;div class=&quot;container&quot;&gt;
+              &lt;div class=&quot;row clearfix&quot;&gt;
+                &lt;div class=&quot;col-xs-12 column&quot;&gt;
+                  &lt;div class=&quot;jumbotron&quot;&gt;
+                    &lt;h1 class=&quot;text-primary&quot;&gt;Lee Ji-eun&lt;/h1&gt;
+                    &lt;p&gt;&lt;strong&gt;Lee Ji-eun&lt;/strong&gt; (Korean: &lt;span&gt;이지은&lt;/span&gt;; born May 16, 1993), better known by her stage name &lt;span class=&quot;text-primary&quot;&gt;&lt;strong&gt;IU&lt;/strong&gt;&lt;/span&gt; (Korean: &lt;span&gt;아이유&lt;/span&gt;), is a South Korean singer, songwriter and actress.&lt;/p&gt;
+                    &lt;img class=&quot;img-rounded img-responsive center-block&quot; src=&quot;https://kathyflores.github.io/img/pic1.jpg&quot;&gt;
+                    &lt;p&gt;
+                      &lt;/br&gt;
+                      &lt;a class=&quot;btn btn-primary btn-large&quot; href=&quot;https://en.wikipedia.org/wiki/IU_(singer)&quot; target=&quot;_blank&quot;&gt;Learn more&lt;/a&gt;
+                    &lt;/p&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;row clearfix&quot;&gt;
+                &lt;div class=&quot;col-xs-6 column&quot;&gt;
+                  &lt;h2 class=&quot;text-center text-info&quot;&gt;&lt;strong&gt;Career&lt;/strong&gt;&lt;/h2&gt;
+                  &lt;ul&gt;
+                    &lt;li&gt;&lt;strong&gt;2008–2009&lt;/strong&gt;: Career beginnings&lt;/li&gt;
+                    &lt;li&gt;&lt;strong&gt;2010–2011&lt;/strong&gt;: Rising popularity and acting debut&lt;/li&gt;
+                    &lt;li&gt;&lt;strong&gt;2012&lt;/strong&gt;: Japanese debut and first solo concert tour&lt;/li&gt;
+                    &lt;li&gt;&lt;strong&gt;2013&lt;/strong&gt;: First starring roles and Modern Times&lt;/li&gt;
+                    &lt;li&gt;&lt;strong&gt;2014&lt;/strong&gt;: A Flower Bookmark&lt;/li&gt;
+                    &lt;li&gt;&lt;strong&gt;2015–2016&lt;/strong&gt;: The Producers, Infinite Challenge, Chat-Shire, and Moon Lovers: Scarlet Heart Ryeo&lt;/li&gt;
+                    &lt;li&gt;&lt;strong&gt;2017–present&lt;/strong&gt;: fourth studio album&lt;/li&gt;
+                  &lt;/ul&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;col-xs-6 column&quot;&gt;
+                  &lt;h2 class=&quot;text-center text-info&quot;&gt;&lt;strong&gt;Film&lt;/strong&gt;&lt;/h2&gt;
+                  &lt;/br&gt;
+                  &lt;table class=&quot;table table-hover table-condensed&quot;&gt;
+                    &lt;thead&gt;
+                      &lt;tr&gt;
+                        &lt;th&gt;Year&lt;/th&gt;
+                        &lt;th&gt;Title&lt;/th&gt;
+                        &lt;th&gt;Role&lt;/th&gt;
+                        &lt;th&gt;Notes&lt;/th&gt;
+                      &lt;/tr&gt;
+                    &lt;/thead&gt;
+                    &lt;tbody&gt;
+                      &lt;tr&gt;
+                        &lt;td&gt;2012&lt;/td&gt;
+                        &lt;td&gt;A Turtle&#39;s Tale 2: Sammy&#39;s Escape from Paradise&lt;/td&gt;
+                        &lt;td&gt;Ella&lt;/td&gt;
+                        &lt;td&gt;Korean dub&lt;/td&gt;
+                      &lt;/tr&gt;
+                      &lt;tr&gt;
+                        &lt;td&gt;2017&lt;/td&gt;
+                        &lt;td&gt;Real&lt;/td&gt;
+                        &lt;td&gt;&lt;/td&gt;
+                        &lt;td&gt;Cameo&lt;/td&gt;
+                      &lt;/tr&gt;
+                    &lt;/tbody&gt;
+                  &lt;/table&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;/br&gt;
+              &lt;div class=&quot;row clearfix&quot;&gt;
+                &lt;div class=&quot;col-xs-12 column&quot;&gt;
+                  &lt;h2 class=&quot;text-center text-info&quot;&gt;&lt;strong&gt;Television drama&lt;/strong&gt;&lt;/h2&gt;
+                  &lt;table class=&quot;table table-condensed table-hover&quot;&gt;
+                    &lt;thead&gt;
+                      &lt;tr&gt;
+                        &lt;th&gt;Year&lt;/th&gt;
+                        &lt;th&gt;Title&lt;/th&gt;
+                        &lt;th&gt;Role&lt;/th&gt;
+                        &lt;th&gt;Notes&lt;/th&gt;
+                      &lt;/tr&gt;
+                    &lt;/thead&gt;
+                    &lt;tbody&gt;
+                      &lt;tr&gt;
+                        &lt;td&gt;2011&lt;/td&gt;
+                        &lt;td&gt;Dream High&lt;/td&gt;
+                        &lt;td&gt;Kim Pil-suk&lt;/td&gt;
+                        &lt;td&gt;Main cast:
+                          &lt;ul&gt;
+                            &lt;li&gt;Nominated – KBS Drama Award for Best New Actress&lt;/li&gt;
+                            &lt;li&gt;Nominated – KBS Drama Award for Best Couple with Jang Wooyoung&lt;/li&gt;
+                            &lt;li&gt;Nominated – Baeksang Arts Award for Most Popular Actress (TV)&lt;/li&gt;
+                            &lt;li&gt;Nominated – Mnet Asian Music&lt;/li&gt;
+                            &lt;li&gt;Award for Best O.S.T. for Someday&lt;/li&gt;
+                          &lt;/ul&gt;
+                        &lt;/td&gt;
+                      &lt;/tr&gt;
+                      &lt;tr&gt;
+                        &lt;td&gt;2011&lt;/td&gt;
+                        &lt;td&gt;Welcome to the Show&lt;/td&gt;
+                        &lt;td&gt;Herself&lt;/td&gt;
+                        &lt;td&gt;Episode 1&lt;/td&gt;
+                      &lt;/tr&gt;
+                      &lt;tr&gt;
+                        &lt;td&gt;2012&lt;/td&gt;
+                        &lt;td&gt;Dream High 2&lt;/td&gt;
+                        &lt;td&gt;Kim Pil-suk&lt;/td&gt;
+                        &lt;td&gt;Episode 1 (cameo)&lt;/td&gt;
+                      &lt;/tr&gt;
+                      &lt;tr&gt;
+                        &lt;td&gt;2012&lt;/td&gt;
+                        &lt;td&gt;Salamander Guru and The Shadows&lt;/td&gt;
+                        &lt;td&gt;Pickpocket Jieun&lt;/td&gt;
+                        &lt;td&gt;Episode 6 (cameo)&lt;/td&gt;
+                      &lt;/tr&gt;
+                      &lt;tr&gt;
+                        &lt;td&gt;2013&lt;/td&gt;
+                        &lt;td&gt;You&#39;re the Best, Lee Soon-shin&lt;/td&gt;
+                        &lt;td&gt;Lee Soon-shin&lt;/td&gt;
+                        &lt;td&gt;Lead role:
+                          &lt;ul&gt;
+                            &lt;li&gt;Won – KBS Drama Award for Best New Actress (also for Bel Ami)&lt;/li&gt;
+                            &lt;li&gt;Won – KBS Drama Award for Best Couple with Jo Jung-suk&lt;/li&gt;
+                            &lt;li&gt;Nominated – KBS Drama Awards&#39; Excellence Award for Actress in a Serial Drama&lt;/li&gt;
+                            &lt;li&gt;Nominated – Baeksang Arts Award for Most Popular Actress (TV)&lt;/li&gt;
+                          &lt;/ul&gt;
+                        &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;tr&gt;
+                                    &lt;td&gt;2013&lt;/td&gt;
+                                    &lt;td&gt;Bel Ami&lt;/td&gt;
+                                    &lt;td&gt;Kim Bo-tong&lt;/td&gt;
+                                    &lt;td&gt;Lead role:
+                                        &lt;ul&gt;
+                                            &lt;li&gt;Won – KBS Drama Award for Best New Actress (also for You&#39;re the Best, Lee Soon-shin)&lt;/li&gt;
+                                            &lt;li&gt;Nominated – KBS Drama Award for Best Couple with Jang Keun-suk&lt;/li&gt;
+                                            &lt;li&gt;Nominated – Seoul International Drama Award for Outstanding Korean Actress&lt;/li&gt;
+                                            &lt;li&gt;Nominated – Seoul International Youth Film Festival for Best Young Actress&lt;/li&gt;
+                                        &lt;/ul&gt;
+                                    &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;tr&gt;
+                                    &lt;td&gt;2015&lt;/td&gt;
+                                    &lt;td&gt;The Producers&lt;/td&gt;
+                                    &lt;td&gt;Cindy&lt;/td&gt;
+                                    &lt;td&gt;Lead role:
+                                        &lt;ul&gt;
+                                            &lt;li&gt;Nominated – KBS Drama Awards&#39; Popularity Award for Actress&lt;/li&gt;
+                                            &lt;li&gt;Nominated – KBS Drama Award for Best Couple with Kim Soo-hyun&lt;/li&gt;
+                                            &lt;li&gt;Nominated – Korea Drama Awards&#39; Excellence Award for Actress&lt;/li&gt;
+                                            &lt;li&gt;Nominated – APAN Star Awards&#39; Excellence Award for Actress in a Miniseries&lt;/li&gt;
+                                        &lt;/ul&gt;
+                                    &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;tr&gt;
+                                    &lt;td&gt;2016&lt;/td&gt;
+                                    &lt;td&gt;Moon Lovers: Scarlet Heart Ryeo&lt;/td&gt;
+                                    &lt;td&gt;Go Ha-jin/Hae-soo&lt;/td&gt;
+                                    &lt;td&gt;Lead role:
+                                        &lt;ul&gt;
+                                            &lt;li&gt;Won – SBS Drama Awards Best Couple Award with Lee Joon-gi&lt;/li&gt;
+                                            &lt;li&gt;Won – SBS Drama Awards Idol Academy Award, Heart-wrenching Award&lt;/li&gt;
+                                            &lt;li&gt;Nominated – SBS Drama Awards K-Wave (Hallyu) Star Award&lt;/li&gt;
+                                        &lt;/ul&gt;
+                                    &lt;/td&gt;
+                                &lt;/tr&gt;
+                    &lt;/tbody&gt;
+                  &lt;/table&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;footer class=&quot;text-center&quot;&gt;
+                  &lt;hr&gt;
+                  &lt;p&gt;© Coded by &lt;a href=&quot;https://github.com/KathyFlores&quot; target=&quot;_blank&quot;&gt;KathyFlores&lt;/p&gt;
+              &lt;/footer&gt;
+            &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>最后的最后，再推荐一个可以在线编辑HTML、CSS、JS的网站，个人觉得还不错：<a href="https://codepen.io/" target="_blank" rel="noopener">https://codepen.io/</a></p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 Gitalk -->
+<div id="gitalk-comment">
+    <!-- Gitalk 评论框 -->
+<div id="gitalk-container"></div>
+
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<script>
+    var gitalk = new Gitalk({
+            clientID: '13ccc096aa6286ef098a',
+            clientSecret: '7a77d4a088ec72639c617d913218a4fe15d2f003',
+            repo: 'KathyFlores.github.io',
+            owner: 'KathyFlores',
+            admin: ['KathyFlores'],
+            // facebook-like distraction free mode
+		id: 'Introduction of IU - First Edition',
+            distractionFreeMode: false
+        })
+   gitalk.render('gitalk-container')
+</script>
+</div>
+<style>
+    #gitalk-comment {
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2017/04/04/PHP-命名空间/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/04/01/PHP-魔术变量/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(http://op2b3idv8.bkt.clouddn.com/sidebar.jpg);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="http://op2b3idv8.bkt.clouddn.com/a1.png" alt="Kathy Flores's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        wmiao018@163.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:wmiao018@163.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">3</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/PHP/">PHP<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/html/">html<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/about" title="About">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                About
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">4</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/Kathy527341147" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/profile.php?id=100011322662879" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+        <a href="https://www.google.com/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-gplus">
+                <span class="visuallyhidden">Google Plus</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Weibo -->
+    
+        <a href="http://weibo.com/1964810423/profile" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-weibo">
+                <span class="visuallyhidden">Weibo</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/KathyFlores" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+        <a href="https://www.zhihu.com/people/wang-miao-88-51" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-zhihu">
+                <span class="visuallyhidden">Zhihu</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;2017&nbsp;-<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>Kathy's Tuple
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","https://cdn.bootcss.com/nprogress/0.2.0/nprogress.js", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+    
+        <script>lsloader.load("sm_js","/js/smoothscroll.js?lOy/ACj5suSNi7ZVFVbpFQ==", true)</script>
+    
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+   <!-- GitTalk -->
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+    
+        
+            <script>lsloader.load("prettify_js","https://cdn.bootcss.com/prettify/r298/prettify.js", true)</script>
+        
+    
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
+        
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
