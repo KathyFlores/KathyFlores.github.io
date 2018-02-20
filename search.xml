@@ -91,7 +91,7 @@ comment:
     gitment.render(&#39;container&#39;)
 &lt;/script&gt;
 </code></pre>
-<p>md5加密方法与我的做法大同小异，具体可参见<a href="https://priesttomb.github.io/日常/2018/02/12/处理Gitalk中由于文章URL过长导致的Validation-Failed(422" target="_blank" rel="noopener">@<strong>PriestTomb</strong>的文章</a>/)。</p>
+<p>md5加密方法与我的做法大同小异，具体可参见<a href="https://priesttomb.github.io/日常/2018/02/12/处理Gitalk中由于文章URL过长导致的Validation-Failed(422" target="_blank" rel="noopener">@<strong>PriestTomb</strong>的文章</a>/ )。</p>
 ]]></content>
       
         
