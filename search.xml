@@ -98,15 +98,6 @@ comment:
     </entry>
     
     <entry>
-      <title><![CDATA[test]]></title>
-      <url>/2018/02/03/test/</url>
-      <content type="html"><![CDATA[<p>test test</p>
-]]></content>
-      
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[PHP 命名空间]]></title>
       <url>/2017/04/04/PHP-%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4/</url>
       <content type="html"><![CDATA[<h1 id="命名空间"><a href="#命名空间" class="headerlink" title="命名空间"></a>命名空间</h1><hr>
