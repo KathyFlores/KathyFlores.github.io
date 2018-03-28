@@ -86,7 +86,7 @@
 <p><strong>输入：</strong>转方向的次数N，长度为N的字符串，由L,R组成，L表示左转，R表示右转；</p>
 <p><strong>输出：</strong>   此时面朝的方向</p>
 </li>
-<li><p>x,y均不大于n，并且x除以y的余数大于等于k （$$1\leq n\leq 10^5, 0\leq k\leq n-1$$），求满足要求的数对(x,y)数量</p>
+<li><p>x,y均不大于n，并且x除以y的余数大于等于k （1&lt;=n&lt;=10^5, 0&lt;=k&lt;=n-1），求满足要求的数对(x,y)数量</p>
 <p><strong>输入：</strong>n,k</p>
 <p><strong>输出：</strong>满足要求的数对数量</p>
 </li>
