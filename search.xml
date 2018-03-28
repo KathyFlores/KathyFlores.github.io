@@ -124,7 +124,7 @@ class Job(models.Model):
 <h4 id="Templates"><a href="#Templates" class="headerlink" title="Templates"></a>Templates</h4><p>每个模板（注意是每个）前都加上</p>
 <pre><code class="django">{% load i18n %}
 </code></pre>
-<p>需要翻译的字符串使用&#123; &#125;% trans %&#123; &#125;标签包裹</p>
+<p>需要翻译的字符串使用&#123; % trans % &#125;标签包裹</p>
 <pre><code class="django">{% trans 'Job Type' %}
 </code></pre>
 <h4 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h4><p>在根目录的urls.py下加入</p>
