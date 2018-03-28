@@ -111,7 +111,7 @@ LOCALE_PATHS = (
       ...
 ]
 </code></pre>
-<h4 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h4><p>import ugettext<em>lazy（不知道为啥起初我试ugettext就不起作用），需要翻译的字符串用</em>()包裹</p>
+<h4 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h4><p>import ugettext_lazy（不知道为啥起初我试ugettext就不起作用），需要翻译的字符串用_()包裹</p>
 <pre><code class="python">from django.utils.translation import ugettext_lazy as _
 class Job(models.Model):
     typeChoices = (
