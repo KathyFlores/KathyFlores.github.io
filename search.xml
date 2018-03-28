@@ -84,18 +84,18 @@
 <h4 id="编程"><a href="#编程" class="headerlink" title="编程"></a>编程</h4><ol>
 <li><p>出门朝北，左右转向，输出最后朝向的方向</p>
 <p><strong>输入：</strong>转方向的次数N，长度为N的字符串，由L,R组成，L表示左转，R表示右转；</p>
-<p><strong>输出:</strong>   此时面朝的方向</p>
+<p><strong>输出：</strong>   此时面朝的方向</p>
 </li>
 <li><p>x,y均不大于n，并且x除以y的余数大于等于k （$$1\leq n\leq 10^5, 0\leq k\leq n-1$$），求满足要求的数对(x,y)数量</p>
 <p><strong>输入：</strong>n,k</p>
 <p><strong>输出：</strong>满足要求的数对数量</p>
 </li>
 <li><p>神奇数列 ：1，12，123，..，12345678910，1234567891011，求从数列l~r（l，r是从1开始的下标）有多少个能被3整除</p>
-<p><strong>输入</strong>：l,r</p>
-<p><strong>输出</strong>：这一区间能被3整除的个数</p>
+<p><strong>输入：</strong>l,r</p>
+<p><strong>输出：</strong>这一区间能被3整除的个数</p>
 </li>
 </ol>
-<h3 id="问答"><a href="#问答" class="headerlink" title="问答"></a>问答</h3><ol>
+<h4 id="问答"><a href="#问答" class="headerlink" title="问答"></a>问答</h4><ol>
 <li><p>列举使用过的前端性能优化方案，描述场景并详细介绍。</p>
 </li>
 <li><p>公司放映系统最近要上线一个【预订随机推荐电影】功能，每天用户通过系统预订名额，由系统每日推荐一部电影，按时推送到用户。现在，在系统已有如下异步方法封装的前提下： </p>
