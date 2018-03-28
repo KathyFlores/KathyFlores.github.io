@@ -3,6 +3,116 @@
   
     
     <entry>
+      <title><![CDATA[2018网易春招前段实习笔试]]></title>
+      <url>/2018/03/28/2018%E7%BD%91%E6%98%93%E6%98%A5%E6%8B%9B%E5%89%8D%E6%AE%B5%E5%AE%9E%E4%B9%A0%E7%AC%94%E8%AF%95/</url>
+      <content type="html"><![CDATA[<p>先谈感想：基本功不扎实，不好好学习的下场终于来了……还是要打好基础啊</p>
+<hr>
+<h3 id="题型"><a href="#题型" class="headerlink" title="题型"></a>题型</h3><p>三类：选择题（20道，20分），编程题（3道，60分），问答题（2道，20分）。</p>
+<h3 id="题目回忆"><a href="#题目回忆" class="headerlink" title="题目回忆"></a>题目回忆</h3><h4 id="选择"><a href="#选择" class="headerlink" title="选择"></a>选择</h4><p>这里按照考点内容简单分类</p>
+<ol>
+<li><p>【操作系统】进程与线程</p>
+</li>
+<li><p>【数据结构】一棵度为4的树有10个节点，选项：</p>
+<ul>
+<li>高度至多6，</li>
+<li>高度至多7，</li>
+<li>高度至少6，</li>
+<li>高度至少7.</li>
+</ul>
+</li>
+<li><p>【数据结构】希尔排序，问增量取5的第一趟排序结果</p>
+</li>
+<li><p>【数据结构】快速排序，问哪个选项不可能是第二趟快速排序的结果</p>
+</li>
+<li><p>【数据结构】一棵二叉树的中序遍历是abcdef，高度最小的不可能的二叉树前序遍历是（dbacfe，cbaedf，cabefd，dbacef）</p>
+</li>
+<li><p>【数据结构】查找二叉树，为了查找321的节点，不可能出现的查找序列</p>
+</li>
+<li><p>【数据结构+信安】哈希算法在信息安全中的应用，给(1)(2)(3)三个应用场景，四个选项中对其进行排列组合，选出正确的一个</p>
+</li>
+<li><p>【计网】关于电子邮件说法不正确的是：</p>
+<ul>
+<li>POPs的特点是只要用户从服务器上读取了邮件，就把该邮件删除；</li>
+<li>IMAP协议不支持创建自定义的文件；</li>
+<li>IMAP协议中客户端和服务器上的邮件保持同步；</li>
+<li>SMTP能发送ASCii码和二进制文件。</li>
+</ul>
+</li>
+<li><p>【计网】关于UDP通信，选不正确的</p>
+</li>
+<li><p>【计网】关于http1.1和http1.0，选不正确的。记得两个选项：</p>
+<ul>
+<li>http1.0只能短连接，http1.1只能长连接</li>
+<li>http1.1增加host字段</li>
+</ul>
+</li>
+<li><p>【计网】关于http说法不正确的：</p>
+<p>（1）304表示临时重定向；</p>
+<p>（2）range请求响应一定是用Http状态码206表示成功；</p>
+<p>（3）Http header分隔符是\r；</p>
+<p>（4）请求如果包含%，需进行encode。</p>
+</li>
+<li><p>【html+css】CSS2中的outline说法，选不正确的（有一个选项是outline-width为auto和为0px的效果一样）</p>
+</li>
+<li><p>【html+css】有关margin，具体不记得了</p>
+</li>
+<li><p>【html+css】有关svg，记得一个选项：svg使用XML格式定义图像</p>
+</li>
+<li><p>【html+css】a:hover,a:visited,a:active,a:link，总之记住L-V-H-A即可</p>
+</li>
+<li><p>【html+css】css定位，记得三个选项：</p>
+<ul>
+<li>relative可以基于absoluate定位</li>
+<li>absolute基于最近的static定位</li>
+<li>子元素不能继承父元素的position</li>
+</ul>
+</li>
+<li><p>【js】a不是空数组，且b===a，哪个选项使a.length和b.length都为0，记得三个：</p>
+<ul>
+<li>b.length=0</li>
+<li>a.splice(0,a.length)</li>
+<li>a.slice(a.length)</li>
+</ul>
+</li>
+<li><p>【js】数组操作，选错误的，其中三个选项分别考了unshift、concat、join</p>
+</li>
+<li><p>【其他】cookie和localstorage，选错误的，有个选项是在与服务器通信时，两者都会携带在http头中</p>
+</li>
+<li><p>【其他】json</p>
+</li>
+</ol>
+<h4 id="编程"><a href="#编程" class="headerlink" title="编程"></a>编程</h4><ol>
+<li><p>出门朝北，左右转向，输出最后朝向的方向</p>
+<p><strong>输入：</strong>转方向的次数N，长度为N的字符串，由L,R组成，L表示左转，R表示右转；</p>
+<p><strong>输出:</strong>   此时面朝的方向</p>
+</li>
+<li><p>x,y均不大于n，并且x除以y的余数大于等于k （$$1\leq n\leq 10^5, 0\leq k\leq n-1$$），求满足要求的数对(x,y)数量</p>
+<p><strong>输入：</strong>n,k</p>
+<p><strong>输出：</strong>满足要求的数对数量</p>
+</li>
+<li><p>神奇数列 ：1，12，123，..，12345678910，1234567891011，求从数列l~r（l，r是从1开始的下标）有多少个能被3整除</p>
+<p><strong>输入</strong>：l,r</p>
+<p><strong>输出</strong>：这一区间能被3整除的个数</p>
+</li>
+</ol>
+<h3 id="问答"><a href="#问答" class="headerlink" title="问答"></a>问答</h3><ol>
+<li><p>列举使用过的前端性能优化方案，描述场景并详细介绍。</p>
+</li>
+<li><p>公司放映系统最近要上线一个【预订随机推荐电影】功能，每天用户通过系统预订名额，由系统每日推荐一部电影，按时推送到用户。现在，在系统已有如下异步方法封装的前提下： </p>
+<ul>
+<li>getTodayUsers(callback):获取今日预定的用户id列表，使用如下：getTodayUsers(userIds=&gt;{ console.log(userIds)})，即回调中拿到用户id列表      </li>
+<li>getTodayMovie(callback):获取今日推荐的电影id，使用如下：getTodayMovie( movieId=&gt;{ console.log(movieId )})，即回调中拿到今日的电影id      </li>
+<li>bookMovieForUsers(userIds, movieId, callback)：使用用户id列表预订某部电影，使用如下bookMovieForUsers([1, 2, 3], 1000, ()=&gt;{console.log(“预订成功了”)})     </li>
+</ul>
+<p>请封装一个bookTodayMovieForTodayUser()的方法，它的作用是为今天预订的用户订阅今天系统推荐的电影，它返回一个promise，这个promise在请求后被resolve，使用方法如下：bookTodayMovieForTodayUser().then( ()=&gt;console.log(“预订成功”))。注：简单起见，所有情况都不需考虑失败情况</p>
+</li>
+</ol>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[外包项目总结]]></title>
       <url>/2018/03/26/%E5%A4%96%E5%8C%85%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/</url>
       <content type="html"><![CDATA[<blockquote>
