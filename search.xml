@@ -20,7 +20,7 @@
 <li><p>网站还要能放上企业的招聘公告，这是雇主与雇员双方信息交互的过程。招聘公告通过岗位分类，也可以通过岗位进行检索。网站界面上还应设置公示栏，公开宣布企业与雇员配对成功的案例，以此来振奋人心，吸引人气！</p>
 </li>
 </ol>
-<h3 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h3><p>Django1.8 + python3</p>
+<h3 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h3><p>​    Django1.8 + python3</p>
 <h3 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h3><ol>
 <li><p>采用默认用户认证系统条件下创建两种用户类型</p>
 <ul>
@@ -111,8 +111,7 @@ LOCALE_PATHS = (
       ...
 ]
 </code></pre>
-<p>####Python</p>
-<p>import ugettext<em>lazy（不知道为啥起初我试ugettext就不起作用），需要翻译的字符串用</em>()包裹</p>
+<h4 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h4><p>import ugettext<em>lazy（不知道为啥起初我试ugettext就不起作用），需要翻译的字符串用</em>()包裹</p>
 <pre><code class="python">from django.utils.translation import ugettext_lazy as _
 class Job(models.Model):
     typeChoices = (
@@ -256,7 +255,7 @@ rm /etc/nginx/sites-enables/default
 <li><p>服务器部署阶段还遇到了关于python版本和pip版本不对的问题。。。再加上有虚拟运行环境，这类问题频繁出现，最后发现只要保证启用虚拟运行环境以后运行python使用python3命令，运行pip使用pip3命令，大部分问题都能解决，面向google编程……</p>
 </li>
 </ol>
-<h3 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h3><p>我还是太菜了……本以为能很快做完的……看来还需要努力</p>
+<h3 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h3><p>​    我还是太菜了……本以为能很快做完的……看来还需要努力</p>
 ]]></content>
       
         
