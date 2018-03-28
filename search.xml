@@ -50,6 +50,31 @@ class UserProfile(AbstractUser):
 <pre><code class="python">AUTH_USER_MODEL = &#39;accounts.UserProfile&#39;
 </code></pre>
 </li>
+<li><p>修改注册的form：</p>
+<pre><code class="python">from django import forms
+from django.db import transaction
+from django.contrib.auth.forms import UserCreationForm,
+from .models import UserProfile,Jobseeker,Employer
+
+class SignupForm(UserCreationForm):
+    typechoice=forms.ChoiceField(label=_(&#39;User Type&#39;),choices=((0,_(&#39;Jobseeker&#39;)),(1,_(&#39;Employer&#39;))),widget=forms.RadioSelect)
+    class Meta:
+        model = UserProfile
+        fields = (&#39;username&#39;,&#39;email&#39;,&#39;password1&#39;,&#39;password2&#39;)
+    @transaction.atomic
+    def save(self):
+        user = super().save(commit=False)
+        user.isEmployer=int(self.cleaned_data.get(&#39;typechoice&#39;))
+        #print(type(user.isEmployer))
+        user.save()
+        if user.isEmployer:
+            Employer.objects.create(user=user)
+        else:
+            Jobseeker.objects.create(user=user)
+
+        return user
+</code></pre>
+</li>
 </ul>
 </li>
 <li><p>国际化</p>
