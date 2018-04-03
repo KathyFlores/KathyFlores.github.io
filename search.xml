@@ -102,18 +102,13 @@ console.log(myfn.c());
 </code></pre>
 <ul>
 <li>Undefined, 2</li>
-</ul>
-</li>
-</ol>
-<ul>
 <li>0, 1</li>
 <li>1, 2</li>
-<li><p><strong>0, 2</strong></p>
+<li><strong>0, 2</strong></li>
+</ul>
 <p>——</p>
 <p>感觉这道题没什么说的，考的是prototype，有oop思想即可。</p>
 </li>
-</ul>
-<ol>
 <li><pre><code class="javascript">let {a, b, ...c} = {a:1, b:2, u:3, v:4};
 console.log(c);
 </code></pre>
@@ -294,25 +289,24 @@ console.log(a[b]);
 <li>改变font-size</li>
 </ul>
 <p>——</p>
+<p><strong>触发repaint</strong></p>
+<p>color的修改，如color=#ddd；</p>
+<p>text-align的修改，如text-align=center；</p>
+<p>a:hover也会造成重绘。</p>
+<p>:hover引起的颜色等不导致页面回流的style变动。</p>
+<p>​</p>
+<p><strong>触发reflow</strong></p>
+<p>调整窗口大小（Resizing the window）</p>
+<p>改变字体（Changing the font）</p>
+<p>增加或者移除样式表（Adding or removing a stylesheet）</p>
+<p>内容变化，比如用户在input框中输入文字（Content changes, such as a user typing text in an input box）</p>
+<p>激活 CSS 伪类，比如 :hover (IE 中为兄弟结点伪类的激活)（Activation of CSS pseudo classes such as :hover (in IE the activation of the pseudo class of a sibling)）</p>
+<p>操作 class 属性（Manipulating the class attribute）</p>
+<p>脚本操作 DOM（A script manipulating the DOM）</p>
+<p>计算 offsetWidth 和 offsetHeight 属性（Calculating offsetWidth and offsetHeight）</p>
+<p>设置 style 属性的值 （Setting a property of the style attribute）</p>
+<p>​    </p>
 </li>
-</ol>
-<p>​     <strong>触发repaint</strong></p>
-<p>​        color的修改，如color=#ddd；</p>
-<p>​        text-align的修改，如text-align=center；</p>
-<p>​        a:hover也会造成重绘。</p>
-<p>​        :hover引起的颜色等不导致页面回流的style变动。</p>
-<p>​        etc.</p>
-<p>​    <strong>触发reflow</strong></p>
-<p>​        调整窗口大小（Resizing the window）</p>
-<p>​        改变字体（Changing the font）</p>
-<p>​        增加或者移除样式表（Adding or removing a stylesheet）</p>
-<p>​        内容变化，比如用户在input框中输入文字（Content changes, such as a user typing text in<br>an input box）</p>
-<p>​        激活 CSS 伪类，比如 :hover (IE 中为兄弟结点伪类的激活)（Activation of CSS pseudo classes such as :hover (in IE the activation of the pseudo class of a sibling)）</p>
-<p>​        操作 class 属性（Manipulating the class attribute）</p>
-<p>​        脚本操作 DOM（A script manipulating the DOM）</p>
-<p>​        计算 offsetWidth 和 offsetHeight 属性（Calculating offsetWidth and offsetHeight）</p>
-<p>​        设置 style 属性的值 （Setting a property of the style attribute）</p>
-<ol>
 <li><p>选正确的：</p>
 <ul>
 <li>IE中attachEvent中的this总指向函数的直接调用者</li>
