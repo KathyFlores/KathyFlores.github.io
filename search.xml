@@ -3,6 +3,365 @@
   
     
     <entry>
+      <title><![CDATA[2018拼多多春招前端实习笔试]]></title>
+      <url>/2018/04/03/2018%E6%8B%BC%E5%A4%9A%E5%A4%9A%E6%98%A5%E6%8B%9B%E5%89%8D%E7%AB%AF%E5%AE%9E%E4%B9%A0%E7%AC%94%E8%AF%95/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>相比网易的笔试，拼多多笔试显得“简单”很多。可能因为基础考的不那么多吧，主要侧重点还是js了，所以做的相对顺手一点。考试时间一个半小时，我一个小时做完，甚至还把题目都抄了下来。。。</p>
+</blockquote>
+<h3 id="题型"><a href="#题型" class="headerlink" title="题型"></a>题型</h3><p>三类：单项选择题（16道，45分），不定项选择题（5道，25分），问答题（2道，30分）。</p>
+<h3 id="题目回忆"><a href="#题目回忆" class="headerlink" title="题目回忆"></a>题目回忆</h3><h4 id="单项选择"><a href="#单项选择" class="headerlink" title="单项选择"></a>单项选择</h4><ol>
+<li><p>给出以下js代码的输出结果：</p>
+<pre><code class="javascript">(function(x){
+    delete x;
+    return x;
+})(2);
+</code></pre>
+<ul>
+<li>出错</li>
+<li>NaN</li>
+<li><strong>2</strong></li>
+<li>undefined</li>
+</ul>
+<p>——</p>
+<p>delete不删除变量或函数，删除的是对象上的属性。这里copy一下mdn上的描述：</p>
+<blockquote>
+<p>与通常对 delete 的理解不同，delete 操作符与直接释放内存<strong>无关</strong>。内存管理 通过断开引用来间接完成的，查看<a href="https://developer.mozilla.org/zh-CNdocs/Web/JavaScript/Memory_Management" target="_blank" rel="noopener">内存管理</a>页可了解详情。</p>
+<p><strong>delete</strong> 操作符会从某个对象上移除指定属性。成功删除的时候回返回 <code>true</code>，否则返回 <code>false</code>。但是，以下情况需要重点考虑：</p>
+<ul>
+<li><p>如果你试图删除的属性不存在，那么delete将不会起任何作用，但仍会返回true</p>
+</li>
+<li><p>如果对象的原型链上有一个与待删除属性同名的属性，那么删除属性之后，对象会使用原型链上的那个属性（也就是说，delete操作只会在自身的属性上起作用）</p>
+</li>
+<li><p>任何使用 </p>
+<p><code>var</code></p>
+<p>声明的属性不能从全局作用域或函数的作用域中删除。</p>
+<ul>
+<li>这样的话，delete操作不能删除任何在全局作用域中的函数（无论这个函数是来自于函数声明或函数表达式）</li>
+<li>除了在全局作用域中的函数不能被删除，在对象(object)中的函数是能够用delete操作删除的。</li>
+</ul>
+</li>
+<li><p>任何用<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/let" target="_blank" rel="noopener"><code>let</code></a>或<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/const" target="_blank" rel="noopener"><code>const</code></a>声明的属性不能够从它被声明的作用域中删除。</p>
+</li>
+<li><p>不可设置的(Non-configurable)属性不能被移除。这意味着像<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math" target="_blank" rel="noopener"><code>Math</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Array" target="_blank" rel="noopener"><code>Array</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object" target="_blank" rel="noopener"><code>Object</code></a>内置对象的属性以及使用<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty" target="_blank" rel="noopener"><code>Object.defineProperty()</code></a>方法设置为不可设置的属性不能被删除。</p>
+</li>
+</ul>
+</blockquote>
+<p>​</p>
+</li>
+<li><p>给出以下js代码，对某个input标签进行点击，输出结果是</p>
+<pre><code class="javascript">input.onmousedown = function(){
+    console.log(&#39;mousedown&#39;);
+}
+input.onmouseup = function(){
+    console.log(&#39;mouseon&#39;);
+}
+input.onclick = function(){
+    console.log(&#39;click&#39;);
+}
+input.onfocus = function(){
+    console.log(&#39;focus&#39;);
+}
+</code></pre>
+<ul>
+<li>mousedown mouse focus click</li>
+<li>mousedown click mouseup focus</li>
+<li><strong>mousedown focus mouseup click</strong></li>
+<li>mousedown mouseup click focus</li>
+</ul>
+<p>——</p>
+<p>本题考的是鼠标行为触发顺序，按照C的顺序来</p>
+</li>
+<li><p>对于盒模型的描述</p>
+<ul>
+<li><strong>标准盒模型的总宽度：width+margin+border+padding</strong></li>
+<li>IE盒模型的总宽度：width+margin+border+padding</li>
+<li>IE盒模型的总宽度：width</li>
+<li>标准盒模型的总宽度：width+margin+border</li>
+</ul>
+<p>——</p>
+<p>本题考的是盒模型，标准盒模型宽度：元素的width和height属性只包含内容content部分，不包含内边距padding和边框border部分，即总宽度=width+margin+border+padding；而IE盒模型：元素的width和height属性同时包含内容content，内边距padding和边框border部分，即： width = content + padding + border，则总宽度为width+margin</p>
+</li>
+<li><pre><code class="javascript">function fn(){
+    this.a=0;
+    this.b=function(){return this.a;}
+}
+fn.prototype = {
+    b: function(){
+        this.a=1;
+        return this.a;
+    },
+    c: function(){
+        this.a=2;
+        return this.a;
+    }
+
+}
+var myfn = new fn();
+console.log(myfn.b());
+console.log(myfn.c());
+</code></pre>
+<ul>
+<li>Undefined, 2</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>0, 1</li>
+<li>1, 2</li>
+<li><p><strong>0, 2</strong></p>
+<p>——</p>
+<p>感觉这道题没什么说的，考的是prototype，有oop思想即可。</p>
+</li>
+</ul>
+<ol>
+<li><pre><code class="javascript">let {a, b, ...c} = {a:1, b:2, u:3, v:4};
+console.log(c);
+</code></pre>
+<ul>
+<li>[Object, Object]</li>
+<li><strong>{u:3, v:4}</strong></li>
+<li>3</li>
+<li>4</li>
+</ul>
+<p>——</p>
+<p>解构赋值和rest参数了解一下</p>
+</li>
+<li><pre><code class="javascript">const a = [1,2,3]; 
+a.splice(2,1,4);
+console.log(a[a.length-1]);
+</code></pre>
+<ul>
+<li><strong>4</strong></li>
+<li>3</li>
+<li>1</li>
+<li>2</li>
+</ul>
+<p>——</p>
+<p>const用法问题，常量索引，不是说值不可变</p>
+</li>
+<li><p>如何让Hello world看不见？</p>
+<pre><code class="html">&lt;div class=&quot;one&quot;&gt;
+    Hello world
+&lt;/div&gt;
+</code></pre>
+<ul>
+<li>三者都对</li>
+<li><strong>.one {opacity:0;}</strong></li>
+<li>.one {width:0; height:0;}</li>
+<li>.one {z-index:-100;}</li>
+</ul>
+<p>——</p>
+<p>z-index仅对于absolute元素有效；C的话文字溢出了，若将overflow设为hidden即看不见。</p>
+</li>
+<li><p>下列哪个选项可以正确的创建日期对象且没有兼容性问题？</p>
+<ul>
+<li>new Date(‘2017-06-25 12:12:12’);</li>
+<li>new Date(‘2017/06/25 12:12:12’);</li>
+<li>new Date(‘1500962729312’);</li>
+<li><strong>new Date(2017,6,25,12,12,12);</strong></li>
+</ul>
+<p>——</p>
+<p>考点Date构造函数接受的参数，C如果不是字符串就对了</p>
+</li>
+<li><pre><code class="javascript">var a1 =111;
+console.log(a1);
+console.log(a2);
+console.log(a3);
+var a2 = 222;
+a3 = 333;
+</code></pre>
+<ul>
+<li>111 undefined undeifined</li>
+<li>111 出错 undefined</li>
+<li>111 222 333</li>
+<li><strong>111 undefined 出错</strong></li>
+</ul>
+<p>——</p>
+<p>变量提升了解一下</p>
+</li>
+<li><p>对于url：<a href="http://127.0.0.1:3000/" target="_blank" rel="noopener">http://127.0.0.1:3000/</a> ，以下哪个是它的hostname？</p>
+<ul>
+<li>//127.0.0.1</li>
+<li>127.0.0.1:3000/</li>
+<li><strong>127.0.0.1</strong></li>
+<li>127.0.0.1:3000</li>
+</ul>
+<p>——</p>
+<p>。。。</p>
+</li>
+<li><p>如何阻止这个元素的默认跳转事件？</p>
+<pre><code class="html">&lt;a id=&quot;testId&quot; href=&quot;https://www.pinduoduo.com/&quot;&gt;
+    hello world
+&lt;/a&gt;
+</code></pre>
+<ul>
+<li>都可以</li>
+<li><strong>a.onclick = function(e){preventDefault(e);}</strong></li>
+<li>a.onmousedown = function(e){preventDefault(e)};</li>
+<li>a.onmouseup = function(e){preventDefault(e)};</li>
+</ul>
+<p>——</p>
+<p>组织a标签跳转的方法要在onclick中实现</p>
+</li>
+<li><pre><code class="javascript">a=1;
+delete a;
+console.log(typeof a);
+var b=1;
+delete b;
+console.log(typeof b);
+</code></pre>
+<ul>
+<li><strong>number number</strong></li>
+<li>undefined number</li>
+<li>number undefined</li>
+<li>undefined undefined</li>
+</ul>
+<p>——</p>
+<p>delete不能删除变量</p>
+</li>
+<li><p>下列哪个选项不属于浏览器存储？</p>
+<ul>
+<li><strong>session</strong></li>
+<li>sessionStorage</li>
+<li>cookie</li>
+<li>localStorage</li>
+</ul>
+<p>——</p>
+<p>浏览器存储数据的方式有三种：BCD</p>
+</li>
+<li><pre><code class="javascript">function test(a,b,c){
+    a=a*10;
+    b.item=5;
+    c={item:5};
+}
+var x = 10;
+var y = {item:10};
+var z = {item:10};
+test(x,y,z);
+console.log(x);
+console.log(y.item);
+console.log(z.item);
+</code></pre>
+<ul>
+<li><strong>10 5 10</strong></li>
+<li>10 10 10</li>
+<li>10 5 5</li>
+<li>10 10 5</li>
+</ul>
+<p>——</p>
+<p>js参数传递的问题</p>
+</li>
+<li><pre><code class="javascript">var a = {};
+b={key:&#39;b&#39;};
+c={key:&#39;c&#39;};
+a[b]=123;
+a[c]=456;
+console.log(a[b]);
+</code></pre>
+<ul>
+<li><strong>456</strong></li>
+<li>123</li>
+<li>B</li>
+<li>C</li>
+</ul>
+<p>——</p>
+<p>这题选A，我没做对。。具体参考<a href="https://blog.csdn.net/hellokingqwe/article/details/52688017" target="_blank" rel="noopener">csdn</a></p>
+</li>
+<li><p>DOM创建新节点的方法没有以下哪一项</p>
+<ul>
+<li>createTextNode</li>
+<li><strong>createNode</strong></li>
+<li>createDocumentFragment</li>
+<li>createElement</li>
+</ul>
+</li>
+</ol>
+<h4 id="不定项选择"><a href="#不定项选择" class="headerlink" title="不定项选择"></a>不定项选择</h4><p>不确定正确与否，就不加粗答案了</p>
+<ol>
+<li><p>关于HTTP2.0的说法</p>
+<ul>
+<li>开始支持长连接</li>
+<li>服务器推送</li>
+<li>同一个连接可并发处理多请求</li>
+<li>使用gzip算法对header压缩</li>
+</ul>
+</li>
+<li><p>以下哪些事件会触发reflow</p>
+<ul>
+<li>改变窗口大小</li>
+<li>display:none</li>
+<li>改变元素宽高</li>
+<li>改变font-size</li>
+</ul>
+<p>——</p>
+</li>
+</ol>
+<p>​     <strong>触发repaint</strong></p>
+<p>​        color的修改，如color=#ddd；</p>
+<p>​        text-align的修改，如text-align=center；</p>
+<p>​        a:hover也会造成重绘。</p>
+<p>​        :hover引起的颜色等不导致页面回流的style变动。</p>
+<p>​        etc.</p>
+<p>​    <strong>触发reflow</strong></p>
+<p>​        调整窗口大小（Resizing the window）</p>
+<p>​        改变字体（Changing the font）</p>
+<p>​        增加或者移除样式表（Adding or removing a stylesheet）</p>
+<p>​        内容变化，比如用户在input框中输入文字（Content changes, such as a user typing text in<br>an input box）</p>
+<p>​        激活 CSS 伪类，比如 :hover (IE 中为兄弟结点伪类的激活)（Activation of CSS pseudo classes such as :hover (in IE the activation of the pseudo class of a sibling)）</p>
+<p>​        操作 class 属性（Manipulating the class attribute）</p>
+<p>​        脚本操作 DOM（A script manipulating the DOM）</p>
+<p>​        计算 offsetWidth 和 offsetHeight 属性（Calculating offsetWidth and offsetHeight）</p>
+<p>​        设置 style 属性的值 （Setting a property of the style attribute）</p>
+<ol>
+<li><p>选正确的：</p>
+<ul>
+<li>IE中attachEvent中的this总指向函数的直接调用者</li>
+<li><strong>this总指向函数的非间接调用者</strong></li>
+<li><strong>若有new关键字，则this指向new出的对象</strong></li>
+<li><strong>this总指向函数的直接调用者</strong></li>
+</ul>
+<p>——</p>
+<p>A中IE中的attachEvent中的this总是指向全局对象Window</p>
+</li>
+<li><p>http状态码描述正确的有</p>
+<ul>
+<li>404 Not Found 无法找到资源</li>
+<li>401 Unauthorized 禁止访问</li>
+<li>304 Not Modified 未修改</li>
+<li>400 Bad Request 无法理解请求格式</li>
+</ul>
+</li>
+<li><p>不稳定的排序算法有：</p>
+<ul>
+<li><strong>选择排序</strong></li>
+<li>冒泡排序</li>
+<li>插入排序</li>
+<li><strong>快速排序</strong></li>
+</ul>
+</li>
+</ol>
+<h4 id="问答题"><a href="#问答题" class="headerlink" title="问答题"></a>问答题</h4><ol>
+<li><p>使用js实现randomStr(n)方法，使其生成长度为n的随机字符串，字符集：[a-z][A-Z][0-9]和’+’，’=’共64个字符</p>
+<pre><code class="javascript">randomStr = function(n){
+    charset = [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;,&#39;e&#39;,&#39;f&#39;,&#39;g&#39;,&#39;h&#39;,&#39;i&#39;,&#39;j&#39;,&#39;k&#39;,&#39;l&#39;,&#39;m&#39;,&#39;n&#39;,&#39;o&#39;,&#39;p&#39;,&#39;q&#39;,&#39;r&#39;,&#39;s&#39;,&#39;t&#39;,&#39;u&#39;,&#39;v&#39;,&#39;w&#39;,&#39;x&#39;,&#39;y&#39;,&#39;z&#39;,&#39;A&#39;,&#39;B&#39;,&#39;C&#39;,&#39;D&#39;,&#39;E&#39;,&#39;F&#39;,&#39;G&#39;,&#39;H&#39;,&#39;I&#39;,&#39;J&#39;,&#39;K&#39;,&#39;L&#39;,&#39;M&#39;,&#39;N&#39;,&#39;O&#39;,&#39;P&#39;,&#39;Q&#39;,&#39;R&#39;,&#39;S&#39;,&#39;T&#39;,&#39;U&#39;,&#39;V&#39;,&#39;W&#39;,&#39;X&#39;,&#39;Y&#39;,&#39;Z&#39;,&#39;0&#39;,&#39;1&#39;,&#39;2&#39;,&#39;3&#39;,&#39;4&#39;,&#39;5&#39;,&#39;6&#39;,&#39;7&#39;,&#39;8&#39;,&#39;9&#39;,&#39;+&#39;,&#39;=&#39;];
+    var res = &#39;&#39;;
+    for(var i =0;i&lt;n;i++){
+        res+=charset[parseInt(Math.random()*64)];
+    }
+    return res;
+}
+</code></pre>
+</li>
+<li><p>使用js实现归并排序，合并两个有序数列</p>
+<p>太简单了不写了。。</p>
+</li>
+</ol>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[2018网易春招前端实习笔试]]></title>
       <url>/2018/03/28/2018%E7%BD%91%E6%98%93%E6%98%A5%E6%8B%9B%E5%89%8D%E7%AB%AF%E5%AE%9E%E4%B9%A0%E7%AC%94%E8%AF%95/</url>
       <content type="html"><![CDATA[<p>先谈感想：基本功不扎实，不好好学习的下场终于来了……还是要打好基础啊</p>
