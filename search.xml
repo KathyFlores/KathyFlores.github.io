@@ -3,6 +3,41 @@
   
     
     <entry>
+      <title><![CDATA[2018网易春招前端实习面试]]></title>
+      <url>/2018/04/19/2018%E7%BD%91%E6%98%93%E6%98%A5%E6%8B%9B%E5%89%8D%E7%AB%AF%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95/</url>
+      <content type="html"><![CDATA[<p>一面很顺利，然鹅二面挂了。。。很心累</p>
+<p>一面：</p>
+<p>先自我介绍</p>
+<ol>
+<li>平时怎么学前端？</li>
+<li>JS红宝书里前几章内容还记得吗？</li>
+<li>变量提升</li>
+<li>js深拷贝</li>
+<li>实现getType(var a)方法，给出a的类型（字符串形式）</li>
+<li>对前端的理解和看法</li>
+<li>如果我负责的项目明天就要上线了，但有个问题短时间内无法解决，我要怎么办</li>
+</ol>
+<p>二面：</p>
+<p>依旧自我介绍</p>
+<ol>
+<li>哪个项目印象最深？为什么</li>
+<li>实现多语言的原理</li>
+<li>框架用过吗？双向绑定了解吗？</li>
+<li>ajax过程</li>
+<li>promise了解吗</li>
+<li>（还问了个问题，我没听过，现在想不起来了。。）</li>
+<li>模块化了解吗</li>
+<li>array的api用过哪些？（详细问了reduce）</li>
+<li>css的flex布局了解吗</li>
+<li>css的position有哪几种</li>
+<li>实现一个布局（左右两栏，左边是商品介绍，右边是商品图片）</li>
+</ol>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[2018拼多多春招前端实习笔试]]></title>
       <url>/2018/04/03/2018%E6%8B%BC%E5%A4%9A%E5%A4%9A%E6%98%A5%E6%8B%9B%E5%89%8D%E7%AB%AF%E5%AE%9E%E4%B9%A0%E7%AC%94%E8%AF%95/</url>
       <content type="html"><![CDATA[<blockquote>
