@@ -3,6 +3,18 @@
   
     
     <entry>
+      <title><![CDATA[vivado综合不动的解决过程]]></title>
+      <url>/2018/04/20/vivado%E7%BB%BC%E5%90%88%E4%B8%8D%E5%8A%A8%E7%9A%84%E8%A7%A3%E5%86%B3%E8%BF%87%E7%A8%8B/</url>
+      <content type="html"><![CDATA[<p>今天写I2C的时候发现vivado综合突然出问题了，点击run synthesis以后一直卡在那里不动，.runs里也没有log。退出综合以后控制台报了一个warning：</p>
+<p>vivado WARNING: [Vivado 12-1017] Problems encountered: 1. PID not specified</p>
+<p>Google了一番发现Xilinx的论坛里也有人遇到这个问题，官方回复是更新vivado。。emmm。。。</p>
+<p>后来偶然发现虚拟机里还有一个vivado进程在运行，任务管理器里kill掉就好了。大功告成！:accept:</p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[2018网易春招前端实习面试]]></title>
       <url>/2018/04/19/2018%E7%BD%91%E6%98%93%E6%98%A5%E6%8B%9B%E5%89%8D%E7%AB%AF%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95/</url>
       <content type="html"><![CDATA[<p>一面很顺利，然鹅二面挂了。。。很心累</p>
