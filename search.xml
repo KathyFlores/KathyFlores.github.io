@@ -11,6 +11,12 @@
 <p>后来偶然发现虚拟机里还有一个vivado进程在运行，任务管理器里kill掉就好了。大功告成！:accept:</p>
 ]]></content>
       
+        <categories>
+            
+            <category> verily </category>
+            
+        </categories>
+        
         
         <tags>
             
@@ -52,6 +58,12 @@
 </ol>
 ]]></content>
       
+        <categories>
+            
+            <category> web </category>
+            
+        </categories>
+        
         
         <tags>
             
@@ -411,6 +423,12 @@ console.log(a[b]);
 </ol>
 ]]></content>
       
+        <categories>
+            
+            <category> web </category>
+            
+        </categories>
+        
         
         <tags>
             
@@ -509,6 +527,12 @@ console.log(a[b]);
 </ol>
 ]]></content>
       
+        <categories>
+            
+            <category> web </category>
+            
+        </categories>
+        
         
         <tags>
             
@@ -799,6 +823,12 @@ rm /etc/nginx/sites-enables/default
 <h3 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h3><p>​    我还是太菜了……本以为能很快做完的……看来还需要努力</p>
 ]]></content>
       
+        <categories>
+            
+            <category> web </category>
+            
+        </categories>
+        
         
         <tags>
             
@@ -900,6 +930,12 @@ comment:
 <p>md5加密方法与我的做法大同小异，具体可参见<a href="https://priesttomb.github.io/日常/2018/02/12/处理Gitalk中由于文章URL过长导致的Validation-Failed%28422%29/" target="_blank" rel="noopener">@<strong>PriestTomb</strong>的文章</a>。</p>
 ]]></content>
       
+        <categories>
+            
+            <category> blog </category>
+            
+        </categories>
+        
         
         <tags>
             
