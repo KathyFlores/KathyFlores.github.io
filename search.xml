@@ -12,6 +12,12 @@
 ]]></content>
       
         
+        <tags>
+            
+            <tag> verilog </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -46,6 +52,12 @@
 </ol>
 ]]></content>
       
+        
+        <tags>
+            
+            <tag> web </tag>
+            
+        </tags>
         
     </entry>
     
@@ -400,6 +412,12 @@ console.log(a[b]);
 ]]></content>
       
         
+        <tags>
+            
+            <tag> web </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -491,6 +509,12 @@ console.log(a[b]);
 </ol>
 ]]></content>
       
+        
+        <tags>
+            
+            <tag> web </tag>
+            
+        </tags>
         
     </entry>
     
@@ -776,6 +800,12 @@ rm /etc/nginx/sites-enables/default
 ]]></content>
       
         
+        <tags>
+            
+            <tag> web </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -870,6 +900,12 @@ comment:
 <p>md5加密方法与我的做法大同小异，具体可参见<a href="https://priesttomb.github.io/日常/2018/02/12/处理Gitalk中由于文章URL过长导致的Validation-Failed%28422%29/" target="_blank" rel="noopener">@<strong>PriestTomb</strong>的文章</a>。</p>
 ]]></content>
       
+        
+        <tags>
+            
+            <tag> blog </tag>
+            
+        </tags>
         
     </entry>
     
@@ -1277,14 +1313,14 @@ A\B::foo();   // 调用命名空间 &quot;A\A&quot; 中定义的类 &quot;B&quot
       
         <categories>
             
-            <category> html </category>
+            <category> web </category>
             
         </categories>
         
         
         <tags>
             
-            <tag> html </tag>
+            <tag> web </tag>
             
         </tags>
         
