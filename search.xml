@@ -62,7 +62,117 @@
 </ul>
 <p>还有一个问题没理解意思，就不写了。。然后好像还问了其他的，记不太清楚了。</p>
 <p>…</p>
-<p>二面约在5月4号下午，面完再补充</p>
+<p>二面有点懵逼，刚开始会议室太热了，好多问题没想好就回答了。。。当然主要还是自己基础不太扎实。。。</p>
+<p>二面：</p>
+<ul>
+<li><p>能实习多久</p>
+</li>
+<li><p>介绍一下做过的项目</p>
+</li>
+<li><p>使用的操作系统</p>
+</li>
+<li><p>习惯使用命令行吗</p>
+</li>
+<li><p>常用的版本管理工具</p>
+</li>
+<li><p>技术栈</p>
+</li>
+<li><p>原生js实现ajax</p>
+</li>
+<li><p>http状态码</p>
+</li>
+<li><p>浏览器存储，使用场景</p>
+</li>
+<li><p>flex布局的好处</p>
+</li>
+<li><p>实现三列布局，每一列等宽，间距10px</p>
+</li>
+<li><p>js二叉树的对象表示</p>
+</li>
+<li><p>反转二叉树</p>
+</li>
+<li><p>然后给了几道题目现场做：</p>
+<ul>
+<li><p>cdn的作用</p>
+</li>
+<li><p>画出下列布局：</p>
+<pre><code class="html">&lt;!doctype html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;style&gt;
+        #a {
+            background: red;
+            font-size: 20px;
+        }
+
+        #b {
+            background: green;
+            float: left;
+            font-size: 20px;
+        }
+
+        #c {
+            background: yellow;
+            float: left;
+            font-size: 40px;
+        }
+
+        #d {
+            background: violet;
+            font-size: 20px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div id=&quot;a&quot;&gt;
+        aaa
+
+        &lt;div id=&quot;b&quot;&gt;
+            bbb
+        &lt;/div&gt;
+        &lt;div id=&quot;c&quot;&gt;
+            ccc
+        &lt;/div&gt;
+        &lt;div id=&quot;d&quot;&gt;
+            d
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+</li>
+<li><p>css权重</p>
+</li>
+<li><p>给出输出：</p>
+<pre><code class="js">var pro = new Promise(function(resolve,reject){
+    var pro1 = new Promise(function(resolve, reject){
+        setTimeout(function(){
+            console.log(&quot;execution 1&quot;);
+            resolve(&quot;resolve 1&quot;);
+        },0);
+        console.log(&quot;execution 2&quot;);
+        resolve(&quot;resolve 2&quot;);
+    });
+    console.log(&quot;execution 3&quot;);
+    resolve(&quot;resolve 3&quot;);
+    pro1.then((args)=&gt;{
+        console.log(args);
+    });
+});
+pro.then((args)=&gt;{
+    console.log(args);
+});
+</code></pre>
+</li>
+<li><p>大致是一个使用setTimeout方法保证队列中的事件按序执行的函数，但写法比较复杂，让我写出函数的作用以及尽量精简实现</p>
+</li>
+</ul>
+</li>
+</ul>
 ]]></content>
       
         <categories>
