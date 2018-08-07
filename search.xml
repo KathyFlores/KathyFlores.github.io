@@ -3,6 +3,40 @@
   
     
     <entry>
+      <title><![CDATA[2019秋招阿里前端一面回忆]]></title>
+      <url>/2018/08/07/2019%E7%A7%8B%E6%8B%9B%E9%98%BF%E9%87%8C%E5%89%8D%E7%AB%AF%E4%B8%80%E9%9D%A2%E5%9B%9E%E5%BF%86/</url>
+      <content type="html"><![CDATA[<ol>
+<li>函数闭包的作用</li>
+<li>正则，头尾空格匹配</li>
+<li>call、apply、bind区别</li>
+<li>跨域</li>
+<li>jsonp中callback的作用</li>
+<li>jsonp中返回数据的格式</li>
+<li>margin重叠</li>
+<li>reflow和repaint</li>
+<li>bfc了解吗</li>
+<li>框架用过吗</li>
+<li>react setState三次会render几次</li>
+<li>react key起什么作用</li>
+<li>react shouldComponentUpdate使用场景</li>
+<li>react diff算法</li>
+<li>react实现滚动加载更多</li>
+<li>实习的前端框架了解吗</li>
+<li>webpack了解吗</li>
+<li>项目过程中遇到最大的问题（感觉应该说一下尾递归优化的事情啊啊啊啊啊。。。一紧张给忘了）</li>
+</ol>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> web </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[2018阿里春招前端实习面试总结]]></title>
       <url>/2018/04/26/2018%E9%98%BF%E9%87%8C%E6%98%A5%E6%8B%9B%E5%89%8D%E7%AB%AF%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/</url>
       <content type="html"><![CDATA[<p>阿里的面试通知真的是等了太久了。。。老早就内推上去了，一直没有通知，然后在有赞约面试时间之后的一个小时后阿里打来了电话。一面感觉还行，问的问题很基础。</p>
