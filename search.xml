@@ -10,11 +10,16 @@
 <li><strong>linux内核层</strong> 我们都知道，安卓是基于linux内核实现的。那么这一层即为内核层，除了内核代码外还包含各种驱动模块。</li>
 <li><strong>Libraries层</strong> 分为两部分，分别是C/C++程序库和Android运行时库（5.0以后Dalvik被ART取代）。</li>
 <li><strong>Framework层</strong> 包括各种manager和View System、Content Providers等，为开发人员提供了开发应用程序所需要的API，平常开发应用程序调用的都是这一层所提供的API，当然也包括系统的应用。这一层的是由Java代码编写的。</li>
-<li><strong>Application层</strong> 用Java开发，与用户直接交互的应用程序。<br><img src="https://ws3.sinaimg.cn/large/006tNbRwly1fyr7ejoae2j30wy0u0qv5.jpg" alt="安卓系统架构-1"><br><img src="https://img-blog.csdn.net/20180206204100695?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMTM5MTYyOQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="安卓系统架构-2"></li>
+<li><strong>Application层</strong> 用Java开发，与用户直接交互的应用程序。<br><img src="https://ws3.sinaimg.cn/large/006tNbRwly1fyr7ejoae2j30wy0u0qv5.jpg" alt="安卓系统架构-1"><br><img src="https://ws3.sinaimg.cn/large/006tNbRwly1fyrm2zry5xj30u01867c4.jpg" alt="安卓系统架构-2"></li>
 </ul>
-<p>下图是Java和Native层交互示意图，Java通过JNI层调用Linux OS中的系统调用来完成对应的功能。JNI层通过IPC（进程间通信）方式与Native层交互。<br>（JNI：Java Native Interface的缩写，它提供了若干的API实现了Java和其他语言的通信（主要是C&amp;C++））<br><img src="https://img-blog.csdn.net/20180206202940849?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMTM5MTYyOQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="Java和Native层交互示意"></p>
+<p>下图是Java和Native层交互示意图，Java通过JNI层调用Linux OS中的系统调用来完成对应的功能。JNI层通过IPC（进程间通信）方式与Native层交互。<br>（JNI：Java Native Interface的缩写，它提供了若干的API实现了Java和其他语言的通信（主要是C&amp;C++））<br><img src="https://ws1.sinaimg.cn/large/006tNbRwly1fyrm1qc8k0j30is0bsjs3.jpg" alt="Java和Native层交互示意"></p>
 <hr>
-<h1 id="2-搭建开发环境"><a href="#2-搭建开发环境" class="headerlink" title="2. 搭建开发环境"></a>2. 搭建开发环境</h1><p>书中推荐安装ubuntu 10.04，我这里装的是16.04。<br>sudo apt-get install git-core curl<br>sudo mkdir -p /develop/download-froyo<br>cd /develop/download-froyo<br>curl <a href="http://android.git.kernel.org/repo" target="_blank" rel="noopener">http://android.git.kernel.org/repo</a> &gt; ./repo</p>
+<h1 id="2-搭建开发环境"><a href="#2-搭建开发环境" class="headerlink" title="2. 搭建开发环境"></a>2. 搭建开发环境</h1><p>书中推荐安装ubuntu 10.04，我这里装的是16.04。</p>
+<pre><code class="shell">sudo apt-get install git-core curl
+sudo mkdir -p /develop/download-froyo
+cd /develop/download-froyo
+curl http://android.git.kernel.org/repo &gt; ./repo
+</code></pre>
 <p>搭建到一半去安卓官网看了下，可能16.04不行，就先搁置了。改天问下学长版本。。</p>
 <p>今天先把源码下下来吧<br>参照官网教程：<a href="https://source.android.com/setup/build/downloading#getting-the-files" target="_blank" rel="noopener">https://source.android.com/setup/build/downloading#getting-the-files</a></p>
 <h2 id="2-1-安装repo"><a href="#2-1-安装repo" class="headerlink" title="2.1 安装repo"></a>2.1 安装repo</h2><pre><code class="shell">mkdir ~/bin
