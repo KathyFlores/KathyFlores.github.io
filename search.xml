@@ -3,6 +3,102 @@
   
     
     <entry>
+      <title><![CDATA[深入理解Android学习笔记2019/1/1]]></title>
+      <url>/2019/01/02/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Android%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02019-1-1/</url>
+      <content type="html"><![CDATA[<h1 id="1-安卓系统架构"><a href="#1-安卓系统架构" class="headerlink" title="1. 安卓系统架构"></a>1. 安卓系统架构</h1><p>下图为安卓的系统架构，可以看出安卓系统分为四层，从下至上分别为：</p>
+<ul>
+<li><strong>linux内核层</strong> 我们都知道，安卓是基于linux内核实现的。那么这一层即为内核层，除了内核代码外还包含各种驱动模块。</li>
+<li><strong>Libraries层</strong> 分为两部分，分别是C/C++程序库和Android运行时库（5.0以后Dalvik被ART取代）。</li>
+<li><strong>Framework层</strong> 包括各种manager和View System、Content Providers等，为开发人员提供了开发应用程序所需要的API，平常开发应用程序调用的都是这一层所提供的API，当然也包括系统的应用。这一层的是由Java代码编写的。</li>
+<li><strong>Application层</strong> 用Java开发，与用户直接交互的应用程序。<br><img src="https://ws3.sinaimg.cn/large/006tNbRwly1fyr7ejoae2j30wy0u0qv5.jpg" alt="安卓系统架构-1"><br><img src="https://img-blog.csdn.net/20180206204100695?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMTM5MTYyOQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="安卓系统架构-2"></li>
+</ul>
+<p>下图是Java和Native层交互示意图，Java通过JNI层调用Linux OS中的系统调用来完成对应的功能。JNI层通过IPC（进程间通信）方式与Native层交互。<br>（JNI：Java Native Interface的缩写，它提供了若干的API实现了Java和其他语言的通信（主要是C&amp;C++））<br><img src="https://img-blog.csdn.net/20180206202940849?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMTM5MTYyOQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="Java和Native层交互示意"></p>
+<hr>
+<h1 id="2-搭建开发环境"><a href="#2-搭建开发环境" class="headerlink" title="2. 搭建开发环境"></a>2. 搭建开发环境</h1><p>书中推荐安装ubuntu 10.04，我这里装的是16.04。<br>sudo apt-get install git-core curl<br>sudo mkdir -p /develop/download-froyo<br>cd /develop/download-froyo<br>curl <a href="http://android.git.kernel.org/repo" target="_blank" rel="noopener">http://android.git.kernel.org/repo</a> &gt; ./repo</p>
+<p>搭建到一半去安卓官网看了下，可能16.04不行，就先搁置了。改天问下学长版本。。</p>
+<p>今天先把源码下下来吧<br>参照官网教程：<a href="https://source.android.com/setup/build/downloading#getting-the-files" target="_blank" rel="noopener">https://source.android.com/setup/build/downloading#getting-the-files</a></p>
+<h2 id="2-1-安装repo"><a href="#2-1-安装repo" class="headerlink" title="2.1 安装repo"></a>2.1 安装repo</h2><pre><code class="shell">mkdir ~/bin
+PATH=~/bin:$PATH
+curl https://storage.googleapis.com/git-repo-downloads/repo &gt; ~/bin/repo
+chmod a+x ~/bin/repo
+</code></pre>
+<h2 id="2-2-初始化-Repo"><a href="#2-2-初始化-Repo" class="headerlink" title="2.2 初始化 Repo"></a>2.2 初始化 Repo</h2><pre><code class="shell">cd ~/Documents
+mkdir android-src
+cd android-src
+repo init -u https://android.googlesource.com/platform/manifest
+</code></pre>
+<p>这里报了错：</p>
+<pre><code class="shell">fatal: Cannot get https://gerrit.googlesource.com/git-repo/clone.bundle
+fatal: error [Errno 60] Operation timed out
+</code></pre>
+<p>然后尝试了<a href="https://www.cnblogs.com/aaronLinux/p/5862235.html" target="_blank" rel="noopener">https://www.cnblogs.com/aaronLinux/p/5862235.html</a>和<a href="https://blog.csdn.net/jianguo_liao19840726/article/details/9774357" target="_blank" rel="noopener">https://blog.csdn.net/jianguo_liao19840726/article/details/9774357</a>里说的方法，报错变成了：</p>
+<pre><code class="shell">fatal: unable to access &#39;https://gerrit.googlesource.com/git-repo/&#39;: Failed to connect to gerrit.googlesource.com port 443: 连接超时
+</code></pre>
+<p>感觉是代理问题，切进./.repo/repo目录，修改proxy：</p>
+<pre><code class="shell">git config --global http.proxy &quot;localhost:1087&quot; # 我的ss的http监听端口为1087
+</code></pre>
+<p>再次尝试init</p>
+<pre><code class="shell">repo init -u https://android.googlesource.com/platform/manifest -b android-7.0.0_r35
+# repo init --config-name # 设置邮箱为为gmail邮箱地址，可选
+repo sync
+</code></pre>
+<p>init过程太慢，并且中间夹杂着curl: (7) Failed to connect to android.googlesource.com port 443: opertaion timeout的报错，参考<a href="https://blog.csdn.net/lishuiyuntian/article/details/71524175" target="_blank" rel="noopener">https://blog.csdn.net/lishuiyuntian/article/details/71524175</a>的解决方法，设置REPO_URL</p>
+<pre><code class="shell">export REPO_URL=&#39;https://mirrors.tuna.tsinghua.edu.cn/git/git-repo/&#39;
+</code></pre>
+<p>然后开了全局代理，还是有443的提示。最后参考<a href="https://mirrors.tuna.tsinghua.edu.cn/help/AOSP/" target="_blank" rel="noopener">清华的help文档</a>，无视了curl: (22) The requested URL returned error: 404 Not Found Server does not provide clone.bundle; ignoring.的报错。</p>
+<p>最后</p>
+<pre><code class="shell">repo sync -c -j8 #多开几个线程 快一点
+</code></pre>
+<hr>
+<h1 id="3-JNI"><a href="#3-JNI" class="headerlink" title="3. JNI"></a>3. JNI</h1><p><strong>JNI</strong>：Java Native Interface的缩写，Java本地调用。主要实现了Java和Native（C/C++）之间的互相调用。</p>
+<p>JNI层必须实现为动态库的样式，便于java虚拟机加载并调用。</p>
+<h2 id="3-1-JAVA层："><a href="#3-1-JAVA层：" class="headerlink" title="3.1 JAVA层："></a>3.1 JAVA层：</h2><ul>
+<li><strong>加载库要在调用native函数之前，一般做法是在static块语句中加载。</strong></li>
+<li><strong>需要由JNI层实现的函数声明需由关键字native修饰。</strong></li>
+</ul>
+<p>例如MediaSanner.java：</p>
+<pre><code class="java">public class MediaScanner
+{
+    static { //static语句
+        // ①加载对应的JNI库，media_jni是JNI库的名字。实际加载动态库的时候会拓展成
+        // libmedia_jni.so，在Windows平台上将拓展为media_jni.dll。
+
+       System.loadLibrary(&quot;media_jni&quot;);
+       native_init();//调用native_init函数
+    }
+    .......
+
+    //非native函数
+    public void scanDirectories(String[] directories, String volumeName){
+          ......
+    }
+
+    // ②声明一个native函数。native为Java的关键字，表示它将由JNI层完成。
+    private static native final void native_init();
+    ......
+    private native void processFile(String path, String mimeType, MediaScannerClient client);
+    ......
+}
+</code></pre>
+<h2 id="3-2-JNI层"><a href="#3-2-JNI层" class="headerlink" title="3.2 JNI层"></a>3.2 JNI层</h2><p>JNI层需要注册JNI层的函数，即将JNI层的函数与JAVA中的native函数关联起来，这样的话调用到Java中的native函数时就可以找到对应JNI层的函数了。<br>至于注册的方法，明天再看。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> android </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> android </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[2019秋招阿里前端一面回忆]]></title>
       <url>/2018/08/07/2019%E7%A7%8B%E6%8B%9B%E9%98%BF%E9%87%8C%E5%89%8D%E7%AB%AF%E4%B8%80%E9%9D%A2%E5%9B%9E%E5%BF%86/</url>
       <content type="html"><![CDATA[<ol>
