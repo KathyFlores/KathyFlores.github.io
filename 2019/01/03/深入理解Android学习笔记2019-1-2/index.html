@@ -45,7 +45,7 @@
     
     <title>
         
-            归档: 2019 | 
+            深入理解Android学习笔记2019/1/2 | 
         
         Kathy&#39;s Tuple
     </title>
@@ -56,7 +56,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="Kathy&#39;s Tuple">
+    <meta name="keywords" content="Kathy&#39;s Tuple,android">
     <meta name="theme-color" content="#8e8e90">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -83,6 +83,9 @@
         <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
         
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/tranquil-heart.min.css?ul3p9I9MsbOxK0L+BHzDDg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
             
         
 
@@ -219,7 +222,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Kathy&#39;s Tuple">
-    <meta name="msapplication-starturl" content="http://blog.kathyf3.com/archives/2019/">
+    <meta name="msapplication-starturl" content="http://blog.kathyf3.com/2019/01/03/深入理解Android学习笔记2019-1-2/">
     <meta name="msapplication-navbutton-color" content="#8e8e90">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Kathy&#39;s Tuple">
@@ -234,13 +237,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://blog.kathyf3.com/archives/2019/">
+    <meta property="og:url" content="http://blog.kathyf3.com/2019/01/03/深入理解Android学习笔记2019-1-2/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="归档: 2019 | Kathy&#39;s Tuple">
+    <meta property="og:title" content="深入理解Android学习笔记2019/1/2 | Kathy&#39;s Tuple">
     <meta property="og:image" content="http://blog-img.cdn.kathyf3.com/favicon.png">
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="android"> 
 
+    
+        <meta property="article:published_time" content="Thu Jan 03 2019 02:43:40 GMT+0800">
+        <meta property="article:modified_time" content="Thu Jan 03 2019 02:56:28 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -248,13 +254,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://blog.kathyf3.com/archives/2019/index.html" />
+        <link rel="canonical" href="http://blog.kathyf3.com/2019/01/03/深入理解Android学习笔记2019-1-2/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://blog.kathyf3.com/2019/01/03/深入理解Android学习笔记2019-1-2/index.html",
+    "headline": "深入理解Android学习笔记2019/1/2",
+    "datePublished": "Thu Jan 03 2019 02:43:40 GMT+0800",
+    "dateModified": "Thu Jan 03 2019 02:56:28 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Kathy Flores",
+        "image": {
+            "@type": "ImageObject",
+            "url": "http://blog-img.cdn.kathyf3.com/a1.png"
+        },
+        "description": "Welcome to Kathy's Tuple!"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Kathy&#39;s Tuple",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "http://blog-img.cdn.kathyf3.com/favicon.png"
+        }
+    },
+    "keywords": ",androidKathy&#39;s Tuple",
+    "description": "",
+}
+</script>
 
 
     
@@ -301,165 +337,414 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-2-JNI"><span class="post-toc-number">1.</span> <span class="post-toc-text">3.2 JNI</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-2-1-JNI函数注册"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">3.2.1 JNI函数注册</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-2-2-数据类型转换"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">3.2.2 数据类型转换</span></a></li></ol></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2019/01/03/深入理解Android学习笔记2019-1-2/">深入理解Android学习笔记2019/1/2</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            接着昨天没看完的部分看：
-3.2 JNI3.2.1 JNI函数注册​    昨天说到JNI层函数需要注册，JNI函数的注册方式有两种：
-
-静态注册根据函数名
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2019/01/03/深入理解Android学习笔记2019-1-2/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="http://blog-img.cdn.kathyf3.com/a1.png" width="44px" height="44px" alt="Kathy Flores's avatar">
-            </div>
-            <div>
-                <strong>Kathy Flores</strong>
-                <span>1月 03, 2019</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/android/">android</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2019/01/02/深入理解Android学习笔记2019-1-1/">深入理解Android学习笔记2019/1/1</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            1. 安卓系统架构下图为安卓的系统架构，可以看出安卓系统分为四层，从下至上分别为：
-
-linux内核层 我们都知道，安卓是基于linux内核实现的。那么这一层即为内核层，除了内核代码外还包含各种驱动模块。
-Libraries层 分为两部分，分别是C/C++程序库和Android运行时库（5.0以后Dalvik...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2019/01/02/深入理解Android学习笔记2019-1-1/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="http://blog-img.cdn.kathyf3.com/a1.png" width="44px" height="44px" alt="Kathy Flores's avatar">
-            </div>
-            <div>
-                <strong>Kathy Flores</strong>
-                <span>1月 02, 2019</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/android/">android</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', 'http://blog.cdn.kathyf3.com/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', 'http://blog.cdn.kathyf3.com/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                深入理解Android学习笔记2019/1/2
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="http://blog-img.cdn.kathyf3.com/a1.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Kathy Flores</strong>
+        <span>1月 03, 2019</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAEOCAAAAABd2qZ5AAADg0lEQVR42u3awW7cMAwE0P3/n26vBdo4M6S02QJPp2CTta3nw4QUX7+sP9YLAQ4cOHDgwIEDBw4cH8zxildxg3I9f+vGfXHgwIEDx22O5DbJQ7RXeP78yw08ft7uBQcOHDhw3ON4jsAkzPbh10Zs/pw4cODAgeP/4kgCMg/RJFDz7+LAgQMHjs/nuNEibEvB9rXhwIEDB473c8zKpKT0yu+SXyHZ6vVeKQ4cOHDgWA80fP7Pb53vwIEDBw4cf3G0q423tkWYl2Gzcbp/PAkOHDhw4DjKsRlWaDc8a/zlbcrh8+PAgQMHjqMceeutbfbNWo2zUm0W6jhw4MCB4wbHc4HUxlseeJtmXwtdl3A4cODAgeMoRxJa+THPJmKTIm3WUsSBAwcOHPc4NkdEydFU/libo6bkal/+o4ADBw4cOI5yJJGWH/OcKqvyRmQe6gf+78CBAwcOHCVH3hCcccyGD2YbziMZBw4cOHCc5UjKqn1j7mxUt8da37wYHDhw4MDxRo42RDejdZvBuBkEDhw4cOC4wTEcLxs1DWeft1duBzVw4MCBA8cNjrwcaocVZtHYBnD7Wxw4cODAcY8jHyPYDMDNVhLJB7hx4MCBA8c1jlkplbfk2u3NGovtoRoOHDhw4DjLsWnt5eVTfsTV8m2akjhw4MCB4zZHO7gwe9BZwOcEbTGJAwcOHDjucbTDCvl12qie3XE2ooEDBw4cOO5xbAYO2vX8DGfJimMnHDhw4MBxiKMOp2AoLR+2y9HzF1AUgThw4MCB4yhHsu12yGA/ptCOVrSgOHDgwIHjNke+gTyG80OmPIbbuI3KPxw4cODAcZRjtr02/Npybhbh7XgfDhw4cOD4KY7kUKodL9gfQc2GJ3DgwIEDx/s52uItB539fUvcRjgOHDhw4LjH0R7ztI+YPOhme+1YBg4cOHDguM2xGWvIx6PzUYZ8xKFdOHDgwIHjHsesfMoPomYjC/tALYbtcODAgQPHUY5hOB0Nzvxb7SsZjsrhwIEDB441R3vM044759zJC2gPw775Sxw4cODAcY2jLc+SDbcHVJt7tcQ4cODAgeMzOdpW4KmgnY1T4MCBAweOz+RIQjQvC2+0Cw+MyuHAgQMHjjVH/uiboH3eZB6x+yvjwIEDB457HLMSKy/DctAk8mdlZBG0OHDgwIFjwWHhwIEDBw4cOHDgwIHjw9ZvpUhTvPE8p+EAAAAASUVORK5CYII=">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/android/">android</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=深入理解Android学习笔记2019/1/2&url=http://blog.kathyf3.com/2019/01/03/深入理解Android学习笔记2019-1-2/index.html&pic=http://blog.kathyf3.comhttp://blog-img.cdn.kathyf3.com/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=深入理解Android学习笔记2019/1/2&url=http://blog.kathyf3.com/2019/01/03/深入理解Android学习笔记2019-1-2/index.html&via=Kathy Flores" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.kathyf3.com/2019/01/03/深入理解Android学习笔记2019-1-2/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://blog.kathyf3.com/2019/01/03/深入理解Android学习笔记2019-1-2/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Kathy&#39;s Tuple&title=深入理解Android学习笔记2019/1/2&summary=&pics=http://blog.kathyf3.comhttp://blog-img.cdn.kathyf3.com/favicon.png&url=http://blog.kathyf3.com/2019/01/03/深入理解Android学习笔记2019-1-2/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
     
 </div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>接着昨天没看完的部分看：</p>
+<h2 id="3-2-JNI"><a href="#3-2-JNI" class="headerlink" title="3.2 JNI"></a>3.2 JNI</h2><h3 id="3-2-1-JNI函数注册"><a href="#3-2-1-JNI函数注册" class="headerlink" title="3.2.1 JNI函数注册"></a>3.2.1 JNI函数注册</h3><p>​    昨天说到JNI层函数需要注册，JNI函数的注册方式有两种：</p>
+<ul>
+<li>静态注册<br>根据<strong>函数名</strong>寻找对应的JNI函数，需要javah（java的工具程序）参与。<br>具体方法：使用javah生成java代码对应的JNI层头文件，头文件里声明了对应的JNI层函数，实现这个函数即可。</li>
+</ul>
+<p>eg. [android_media_MediaScanner.h]</p>
+<pre><code class="c">/* DO NOT EDIT THIS FILE - it is machinegenerated */
+#include &lt;jni.h&gt;  //必须包含这个头文件，否则编译通不过
+/* Header for class android_media_MediaScanner*/
+#ifndef _Included_android_media_MediaScanner
+#define _Included_android_media_MediaScanner
+#ifdef __cplusplus
+extern &quot;C&quot; {
+#endif
+......
+//略去一部分注释内容
+//processFile的JNI函数
+JNIEXPORT void JNICALL Java_android_media_MediaScanner_processFile
+                   (JNIEnv *, jobject, jstring,jstring, jobject);
+......
+//略去一部分注释内容
+//native_init对应的JNI函数
+
+JNIEXPORT void JNICALL Java_android_media_MediaScanner_native_1init
+  (JNIEnv*, jclass);
+#ifdef __cplusplus
+}
+#endif
+#endif
+</code></pre>
+<p>​    <strong>当Java层调用native_init函数时，它会从对应的JNI库Java_android_media_MediaScanner_native_linit，如果没有，就会报错。如果找到，则会为这个native_init和Java_android_media_MediaScanner_native_linit建立一个关联关系，其实就是保存JNI层函数的函数指针。以后再调用native_init函数时，直接使用这个函数指针就可以了，当然这项工作是由虚拟机完成的。</strong></p>
+<pre><code>静态注册的缺点：
+· 需要编译所有声明了native函数的Java类，每个生成的class文件都得用javah生成一个头文件。
+· javah生成的JNI层函数名特别长，书写起来很不方便。
+· 初次调用native函数时要根据函数名字搜索对应的JNI层函数来建立关联关系，这样会影响运行效率。
+</code></pre><ul>
+<li>动态注册<br>用<strong>结构</strong>来记录native函数和JNI函数的对应关系，这个结构叫<strong>JNINativeMethod</strong>。<pre><code class="c">typedef struct {
+  //Java中native函数的名字，不用携带包的路径。例如“native_init“。
+  const char* name;    
+  //Java函数的签名信息，用字符串表示，是参数类型和返回值类型的组合。
+  const char* signature;
+  //JNI层对应函数的函数指针，注意它是void*类型。
+  void*       fnPtr;  
+} JNINativeMethod;
+</code></pre>
+</li>
+</ul>
+<p>eg. [android_media_MediaScanner.cpp]</p>
+<pre><code class="cpp">//定义一个JNINativeMethod数组，其成员就是MS中所有native函数的一一对应关系。
+static JNINativeMethod gMethods[] = {
+    ......
+    {
+        &quot;processFile&quot;, //Java中native函数的函数名。
+        //processFile的签名信息，签名信息的知识，后面再做介绍。
+        &quot;(Ljava/lang/String;Ljava/lang/String;Landroid/media/MediaScannerClient;)V&quot;,
+        (void*)android_media_MediaScanner_processFile //JNI层对应函数指针。
+    },
+    ......
+    {
+        &quot;native_init&quot;,     
+        &quot;()V&quot;,                
+        (void *)android_media_MediaScanner_native_init
+    },
+    ......
+};
+
+//注册JNINativeMethod数组
+int register_android_media_MediaScanner(JNIEnv* env)
+{
+    //调用AndroidRuntime的registerNativeMethods函数，第二个参数表明是Java中的哪个类
+    returnAndroidRuntime::registerNativeMethods(env,
+        &quot;android/media/MediaScanner&quot;, gMethods, NELEM(gMethods));
+}
+</code></pre>
+<p>​    上述代码中有一个函数：registerNativeMethods，这一函数由AndroidRunTime类提供，作用是完成注册工作。实现如下：</p>
+<pre><code class="cpp">//[AndroidRunTime.cpp]
+int AndroidRuntime::registerNativeMethods(JNIEnv*env,
+    const char* className, const JNINativeMethod* gMethods, int numMethods)
+{
+    //调用jniRegisterNativeMethods函数完成注册
+    return jniRegisterNativeMethods(env, className, gMethods, numMethods);
+}
+</code></pre>
+<p>​    其中jniRegisterNativeMethods是Android平台中，为了方便JNI使用而提供的一个帮助函数：</p>
+<pre><code class="c">//[JNIHelp.c]
+int jniRegisterNativeMethods(JNIEnv* env, const char* className,
+                                  const JNINativeMethod* gMethods, int numMethods)
+{
+    jclass clazz;
+    clazz = (*env)-&gt;FindClass(env, className); // 找到函数所在类
+    ......
+
+    //实际上是调用JNIEnv的RegisterNatives函数完成注册的
+    if((*env)-&gt;RegisterNatives(env, clazz, gMethods, numMethods) &lt; 0) {
+       return -1;
+    }
+    return 0;
+}
+</code></pre>
+<p>​    当Java层通过System.loadLibrary加载完<strong>JNI动态库</strong>后，紧接着会查找该库中一个叫<strong>JNI_OnLoad</strong>的函数，如果有，就调用它，而动态注册的工作就是在这里完成的。所以必须实现JNI_OnLoad函数。</p>
+<pre><code class="cpp">[android_media_MediaPlayer.cpp]
+jint JNI_OnLoad(JavaVM* vm, void* reserved)
+{
+    //该函数的第一个参数类型为JavaVM,这可是虚拟机在JNI层的代表喔，每个Java进程只有一个这样的JavaVM
+    JNIEnv* env = NULL;
+    jint result = -1;
+
+    if(vm-&gt;GetEnv((void**) &amp;env, JNI_VERSION_1_4) != JNI_OK) {
+
+        gotobail;
+    }
+
+    ...... 
+
+    //动态注册MediaScanner的JNI函数。
+    if(register_android_media_MediaScanner(env) &lt; 0) {
+        goto bail;
+    }
+
+    ......
+
+    return JNI_VERSION_1_4;//必须返回这个值，否则会报错。
+}
+</code></pre>
+<p>​    JNI层代码中一般要包含jni.h这个头文件。Android源码中提供了一个帮助头文件JNIHelp.h，它内部包含了jni.h，所以我们在自己的代码中直接包含JNIHelp.h即可。</p>
+<h3 id="3-2-2-数据类型转换"><a href="#3-2-2-数据类型转换" class="headerlink" title="3.2.2 数据类型转换"></a>3.2.2 数据类型转换</h3><p>​    Java的数据类型到了JNI层会做转换，根据java数据类型的分类区别对待：</p>
+<ul>
+<li><p>基本类型（❓疑问：字长应该不一定吧，要看系统位数？）</p>
+<p>| java类型 | native类型 | 符号属性 | 字长 |<br>| ——– | ———- | ——– | —- |<br>| boolean  | jboolean   | ❌无符号  | 8位  |<br>| byte     | jbyte      | ❌无符号  | 8位  |<br>| char     | jchar      | ❌无符号  | 16位 |<br>| short    | jshort     | ✅有符号  | 16位 |<br>| int      | jint       | ✅有符号  | 32位 |<br>| long     | jlong      | ✅有符号  | 64位 |<br>| float    | jfloat     | ✅有符号  | 32位 |<br>| double   | jdouble    | ✅有符号  | 64位 |</p>
+<p>⚠️ jchar占16位！普通char占8位！</p>
+</li>
+<li><p>引用数据类型<br><a href="https://ws3.sinaimg.cn/large/006tNbRwly1fyst8bsa3bj31mu0kkq99.jpg" target="_blank" rel="noopener">https://ws3.sinaimg.cn/large/006tNbRwly1fyst8bsa3bj31mu0kkq99.jpg</a></p>
+<p>除了Java中基本数据类型的数组、Class、String和Throwable外，其余所有Java对象的数据类型在JNI中都用jobject表示。</p>
+</li>
+</ul>
+<hr>
+<p>今天没怎么学习，先这样吧，明天开始看JNIEnv相关的内容。</p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 Gitalk -->
+<div id="gitalk-comment">
+    <!-- Gitalk 评论框 -->
+<div id="gitalk-container"></div>
+
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<script>
+    var gitalk = new Gitalk({
+            clientID: '13ccc096aa6286ef098a',
+            clientSecret: '7a77d4a088ec72639c617d913218a4fe15d2f003',
+            repo: 'KathyFlores.github.io',
+            owner: 'KathyFlores',
+            admin: ['KathyFlores'],
+            // facebook-like distraction free mode
+		id: '深入理解Android学习笔记2019/1/2',
+            distractionFreeMode: false
+        })
+   gitalk.render('gitalk-container')
+</script>
+</div>
+<style>
+    #gitalk-comment {
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2019/01/02/深入理解Android学习笔记2019-1-1/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
@@ -814,6 +1099,10 @@ It will not impact the appearance and can give developers a lot of support :)
 <!-- Import prettify js  -->
 
     
+        
+            <script>lsloader.load("prettify_js","https://cdn.bootcss.com/prettify/r298/prettify.js", true)</script>
+        
+    
 
 
 
@@ -826,6 +1115,11 @@ It will not impact the appearance and can give developers a lot of support :)
     });
 
     
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
         
     
     
