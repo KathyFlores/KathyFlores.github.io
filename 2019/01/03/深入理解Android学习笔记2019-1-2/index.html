@@ -246,7 +246,7 @@
 
     
         <meta property="article:published_time" content="Thu Jan 03 2019 02:43:40 GMT+0800">
-        <meta property="article:modified_time" content="Thu Jan 03 2019 02:56:28 GMT+0800">
+        <meta property="article:modified_time" content="Thu Jan 03 2019 03:02:26 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -269,7 +269,7 @@
     "mainEntityOfPage": "http://blog.kathyf3.com/2019/01/03/深入理解Android学习笔记2019-1-2/index.html",
     "headline": "深入理解Android学习笔记2019/1/2",
     "datePublished": "Thu Jan 03 2019 02:43:40 GMT+0800",
-    "dateModified": "Thu Jan 03 2019 02:56:28 GMT+0800",
+    "dateModified": "Thu Jan 03 2019 03:02:26 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Kathy Flores",
@@ -540,8 +540,8 @@
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
         <p>接着昨天没看完的部分看：</p>
-<h2 id="3-2-JNI"><a href="#3-2-JNI" class="headerlink" title="3.2 JNI"></a>3.2 JNI</h2><h3 id="3-2-1-JNI函数注册"><a href="#3-2-1-JNI函数注册" class="headerlink" title="3.2.1 JNI函数注册"></a>3.2.1 JNI函数注册</h3><p>​    昨天说到JNI层函数需要注册，JNI函数的注册方式有两种：</p>
-<ul>
+<h2 id="3-2-JNI"><a href="#3-2-JNI" class="headerlink" title="3.2 JNI"></a>3.2 JNI</h2><h3 id="3-2-1-JNI函数注册"><a href="#3-2-1-JNI函数注册" class="headerlink" title="3.2.1 JNI函数注册"></a>3.2.1 JNI函数注册</h3><pre><code>昨天说到JNI层函数需要注册，JNI函数的注册方式有两种：
+</code></pre><ul>
 <li>静态注册<br>根据<strong>函数名</strong>寻找对应的JNI函数，需要javah（java的工具程序）参与。<br>具体方法：使用javah生成java代码对应的JNI层头文件，头文件里声明了对应的JNI层函数，实现这个函数即可。</li>
 </ul>
 <p>eg. [android_media_MediaScanner.h]</p>
@@ -569,8 +569,9 @@ JNIEXPORT void JNICALL Java_android_media_MediaScanner_native_1init
 #endif
 #endif
 </code></pre>
-<p>​    <strong>当Java层调用native_init函数时，它会从对应的JNI库Java_android_media_MediaScanner_native_linit，如果没有，就会报错。如果找到，则会为这个native_init和Java_android_media_MediaScanner_native_linit建立一个关联关系，其实就是保存JNI层函数的函数指针。以后再调用native_init函数时，直接使用这个函数指针就可以了，当然这项工作是由虚拟机完成的。</strong></p>
-<pre><code>静态注册的缺点：
+<pre><code>**当Java层调用native_init函数时，它会从对应的JNI库Java_android_media_MediaScanner_native_linit，如果没有，就会报错。如果找到，则会为这个native_init和Java_android_media_MediaScanner_native_linit建立一个关联关系，其实就是保存JNI层函数的函数指针。以后再调用native_init函数时，直接使用这个函数指针就可以了，当然这项工作是由虚拟机完成的。**
+
+静态注册的缺点：
 · 需要编译所有声明了native函数的Java类，每个生成的class文件都得用javah生成一个头文件。
 · javah生成的JNI层函数名特别长，书写起来很不方便。
 · 初次调用native函数时要根据函数名字搜索对应的JNI层函数来建立关联关系，这样会影响运行效率。
@@ -613,8 +614,8 @@ int register_android_media_MediaScanner(JNIEnv* env)
         &quot;android/media/MediaScanner&quot;, gMethods, NELEM(gMethods));
 }
 </code></pre>
-<p>​    上述代码中有一个函数：registerNativeMethods，这一函数由AndroidRunTime类提供，作用是完成注册工作。实现如下：</p>
-<pre><code class="cpp">//[AndroidRunTime.cpp]
+<pre><code>上述代码中有一个函数：registerNativeMethods，这一函数由AndroidRunTime类提供，作用是完成注册工作。实现如下：
+</code></pre><pre><code class="cpp">//[AndroidRunTime.cpp]
 int AndroidRuntime::registerNativeMethods(JNIEnv*env,
     const char* className, const JNINativeMethod* gMethods, int numMethods)
 {
@@ -622,8 +623,8 @@ int AndroidRuntime::registerNativeMethods(JNIEnv*env,
     return jniRegisterNativeMethods(env, className, gMethods, numMethods);
 }
 </code></pre>
-<p>​    其中jniRegisterNativeMethods是Android平台中，为了方便JNI使用而提供的一个帮助函数：</p>
-<pre><code class="c">//[JNIHelp.c]
+<pre><code>其中jniRegisterNativeMethods是Android平台中，为了方便JNI使用而提供的一个帮助函数：
+</code></pre><pre><code class="c">//[JNIHelp.c]
 int jniRegisterNativeMethods(JNIEnv* env, const char* className,
                                   const JNINativeMethod* gMethods, int numMethods)
 {
@@ -638,8 +639,8 @@ int jniRegisterNativeMethods(JNIEnv* env, const char* className,
     return 0;
 }
 </code></pre>
-<p>​    当Java层通过System.loadLibrary加载完<strong>JNI动态库</strong>后，紧接着会查找该库中一个叫<strong>JNI_OnLoad</strong>的函数，如果有，就调用它，而动态注册的工作就是在这里完成的。所以必须实现JNI_OnLoad函数。</p>
-<pre><code class="cpp">[android_media_MediaPlayer.cpp]
+<pre><code>当Java层通过System.loadLibrary加载完**JNI动态库**后，紧接着会查找该库中一个叫**JNI_OnLoad**的函数，如果有，就调用它，而动态注册的工作就是在这里完成的。所以必须实现JNI_OnLoad函数。
+</code></pre><pre><code class="cpp">[android_media_MediaPlayer.cpp]
 jint JNI_OnLoad(JavaVM* vm, void* reserved)
 {
     //该函数的第一个参数类型为JavaVM,这可是虚拟机在JNI层的代表喔，每个Java进程只有一个这样的JavaVM
@@ -663,11 +664,11 @@ jint JNI_OnLoad(JavaVM* vm, void* reserved)
     return JNI_VERSION_1_4;//必须返回这个值，否则会报错。
 }
 </code></pre>
-<p>​    JNI层代码中一般要包含jni.h这个头文件。Android源码中提供了一个帮助头文件JNIHelp.h，它内部包含了jni.h，所以我们在自己的代码中直接包含JNIHelp.h即可。</p>
-<h3 id="3-2-2-数据类型转换"><a href="#3-2-2-数据类型转换" class="headerlink" title="3.2.2 数据类型转换"></a>3.2.2 数据类型转换</h3><p>​    Java的数据类型到了JNI层会做转换，根据java数据类型的分类区别对待：</p>
-<ul>
+<pre><code>JNI层代码中一般要包含jni.h这个头文件。Android源码中提供了一个帮助头文件JNIHelp.h，它内部包含了jni.h，所以我们在自己的代码中直接包含JNIHelp.h即可。
+</code></pre><h3 id="3-2-2-数据类型转换"><a href="#3-2-2-数据类型转换" class="headerlink" title="3.2.2 数据类型转换"></a>3.2.2 数据类型转换</h3><pre><code>Java的数据类型到了JNI层会做转换，根据java数据类型的分类区别对待：
+</code></pre><ul>
 <li><p>基本类型（❓疑问：字长应该不一定吧，要看系统位数？）</p>
-<p>| java类型 | native类型 | 符号属性 | 字长 |<br>| ——– | ———- | ——– | —- |<br>| boolean  | jboolean   | ❌无符号  | 8位  |<br>| byte     | jbyte      | ❌无符号  | 8位  |<br>| char     | jchar      | ❌无符号  | 16位 |<br>| short    | jshort     | ✅有符号  | 16位 |<br>| int      | jint       | ✅有符号  | 32位 |<br>| long     | jlong      | ✅有符号  | 64位 |<br>| float    | jfloat     | ✅有符号  | 32位 |<br>| double   | jdouble    | ✅有符号  | 64位 |</p>
+<p>| java类型 | native类型 | 符号属性 | 字长 |<br>| - | - | - | -|<br>| boolean  | jboolean   | ❌无符号  | 8位  |<br>| byte     | jbyte      | ❌无符号  | 8位  |<br>| char     | jchar      | ❌无符号  | 16位 |<br>| short    | jshort     | ✅有符号  | 16位 |<br>| int      | jint       | ✅有符号  | 32位 |<br>| long     | jlong      | ✅有符号  | 64位 |<br>| float    | jfloat     | ✅有符号  | 32位 |<br>| double   | jdouble    | ✅有符号  | 64位 |</p>
 <p>⚠️ jchar占16位！普通char占8位！</p>
 </li>
 <li><p>引用数据类型<br><a href="https://ws3.sinaimg.cn/large/006tNbRwly1fyst8bsa3bj31mu0kkq99.jpg" target="_blank" rel="noopener">https://ws3.sinaimg.cn/large/006tNbRwly1fyst8bsa3bj31mu0kkq99.jpg</a></p>
