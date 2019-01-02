@@ -133,12 +133,72 @@ jint JNI_OnLoad(JavaVM* vm, void* reserved)
 <pre><code>JNI层代码中一般要包含jni.h这个头文件。Android源码中提供了一个帮助头文件JNIHelp.h，它内部包含了jni.h，所以我们在自己的代码中直接包含JNIHelp.h即可。
 </code></pre><h3 id="3-2-2-数据类型转换"><a href="#3-2-2-数据类型转换" class="headerlink" title="3.2.2 数据类型转换"></a>3.2.2 数据类型转换</h3><pre><code>Java的数据类型到了JNI层会做转换，根据java数据类型的分类区别对待：
 </code></pre><ul>
-<li><p>基本类型（❓疑问：字长应该不一定吧，要看系统位数？）</p>
-<p>| java类型 | native类型 | 符号属性 | 字长 |<br>| - | - | - | -|<br>| boolean  | jboolean   | ❌无符号  | 8位  |<br>| byte     | jbyte      | ❌无符号  | 8位  |<br>| char     | jchar      | ❌无符号  | 16位 |<br>| short    | jshort     | ✅有符号  | 16位 |<br>| int      | jint       | ✅有符号  | 32位 |<br>| long     | jlong      | ✅有符号  | 64位 |<br>| float    | jfloat     | ✅有符号  | 32位 |<br>| double   | jdouble    | ✅有符号  | 64位 |</p>
-<p>⚠️ jchar占16位！普通char占8位！</p>
-</li>
+<li>基本类型（❓疑问：字长应该不一定吧，要看系统位数？）</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>java类型</th>
+<th>native类型</th>
+<th>符号属性</th>
+<th>字长</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>boolean</td>
+<td>jboolean</td>
+<td>❌无符号</td>
+<td>8位</td>
+</tr>
+<tr>
+<td>byte</td>
+<td>jbyte</td>
+<td>❌无符号</td>
+<td>8位</td>
+</tr>
+<tr>
+<td>char</td>
+<td>jchar</td>
+<td>❌无符号</td>
+<td>16位</td>
+</tr>
+<tr>
+<td>short</td>
+<td>jshort</td>
+<td>✅有符号</td>
+<td>16位</td>
+</tr>
+<tr>
+<td>int</td>
+<td>jint</td>
+<td>✅有符号</td>
+<td>32位</td>
+</tr>
+<tr>
+<td>long</td>
+<td>jlong</td>
+<td>✅有符号</td>
+<td>64位</td>
+</tr>
+<tr>
+<td>float</td>
+<td>jfloat</td>
+<td>✅有符号</td>
+<td>32位</td>
+</tr>
+<tr>
+<td>double</td>
+<td>jdouble</td>
+<td>✅有符号</td>
+<td>64位</td>
+</tr>
+</tbody>
+</table>
+<pre><code>⚠️ jchar占16位！普通char占8位！
+</code></pre><ul>
 <li><p>引用数据类型<br><a href="https://ws3.sinaimg.cn/large/006tNbRwly1fyst8bsa3bj31mu0kkq99.jpg" target="_blank" rel="noopener">https://ws3.sinaimg.cn/large/006tNbRwly1fyst8bsa3bj31mu0kkq99.jpg</a></p>
-<p>除了Java中基本数据类型的数组、Class、String和Throwable外，其余所有Java对象的数据类型在JNI中都用jobject表示。</p>
+<p>  除了Java中基本数据类型的数组、Class、String和Throwable外，其余所有Java对象的数据类型在JNI中都用jobject表示。</p>
 </li>
 </ul>
 <hr>
